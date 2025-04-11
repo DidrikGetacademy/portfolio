@@ -4,7 +4,7 @@
   height: 100vh;
   width: 100vw;
 }
-.app-container{
+.appcontainer{
   display: flex;
   overflow: hidden;
 }
