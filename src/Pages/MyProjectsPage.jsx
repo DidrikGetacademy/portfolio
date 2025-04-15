@@ -18,7 +18,13 @@ import toolwindow from "../Image/toolwindow.png";
 import usersactivation from "../Image/usersactivation.png";
 import validkeyactivation from "../Image/validkeyactivation.png";
 import videoenchancer from "../Image/videoenchancer.png";
-
+import moviespin1 from '../Image/moviespin1.png';
+import moviespin3 from '../Image/moviespin3.png';
+import moviespin4 from '../Image/moviespin4.png';
+import moviespin5 from '../Image/moviespin5.png';
+import moviespinruller from '../Image/moviespinruller.png';
+import generator from '../Image/generator.png';
+import frontpage from '../Image/frontpage.png';
 function MyProjectsPage() {
 
 
@@ -64,11 +70,18 @@ function MyProjectsPage() {
         />
         <ProjectCard
         title="MovieSpin"
-        description=""
+        description="A website built to make it easier to find movies and series to watch, with the ability to store them in your account. Features include account creation, user login, backend support, and a wheel to spin for a random movie suggestion."
         technologies={["Vanilla/Javascript, Express Backend"]}
         githublink="https://github.com/DidrikGetacademy/MovieSpin-Project"
         website="https://didrikgetacademy.github.io/MovieSpin-Project/"
         images={[
+          frontpage,
+          moviespin1,
+          moviespin3,
+          moviespin4,
+          moviespin5,
+          moviespinruller,
+          generator,
         ]}
         />
       
