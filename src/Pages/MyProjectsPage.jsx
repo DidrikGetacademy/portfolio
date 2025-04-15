@@ -14,24 +14,25 @@ function MyProjectsPage() {
         technologies={["Python","Php"]}
         githublink="https://github.com/DidrikGetacademy/VideoEnchancer-GUI-Software"
         images={[
-          "/portfolio/Image/ProjectCard-images/register.png",
-          "/portfolio/Image/ProjectCard-images/keycode.png",
-          "/portfolio/Image/ProjectCard-images/activationkeyconnectedtouser.png",
-          "/portfolio/Image/ProjectCard-images/registrationdatabase.png",
-          "/portfolio/Image/ProjectCard-images/activationwindow.png",
-          "/portfolio/Image/ProjectCard-images/aktiveringsnøkkel.png",
-          "/portfolio/Image/ProjectCard-images//appdataencryption.png",
-          "/portfolio/Image/ProjectCard-images/appdatafolder.png",
-          "/portfolio/Image/ProjectCard-images/brukerprofil.png",
-          "/portfolio/Image/ProjectCard-images/databaseactivationkey.png",
-          "/portfolio/Image/ProjectCard-images/login.png",
-          "/portfolio/Image/ProjectCard-images/registration.png",
-          "/portfolio/Image/ProjectCard-images/secret_key_appdata.png",
-          "/portfolio/Image/ProjectCard-images/toolwindow.png",
-          "/portfolio/Image/ProjectCard-images/usersactivation.png",
-          "/portfolio/Image/ProjectCard-images/validkeyactivation.png",
-          "/portfolio/Image/ProjectCard-images/videoEnchancer.png",
+          `${process.env.PUBLIC_URL}/Image/register.png`,
+          `${process.env.PUBLIC_URL}/Image/keycode.png`,
+          `${process.env.PUBLIC_URL}/Image/activationkeyconnectedtouser.png`,
+          `${process.env.PUBLIC_URL}/Image/registrationdatabase.png`,
+          `${process.env.PUBLIC_URL}/Image/activationwindow.png`,
+          `${process.env.PUBLIC_URL}/Image/aktiveringsnøkkel.png`,
+          `${process.env.PUBLIC_URL}/Image/appdataencryption.png`,
+          `${process.env.PUBLIC_URL}/Image/appdatafolder.png`,
+          `${process.env.PUBLIC_URL}/Image/brukerprofil.png`,
+          `${process.env.PUBLIC_URL}/Image/databaseactivationkey.png`,
+          `${process.env.PUBLIC_URL}/Image/login.png`,
+          `${process.env.PUBLIC_URL}/Image/registration.png`,
+          `${process.env.PUBLIC_URL}/Image/secret_key_appdata.png`,
+          `${process.env.PUBLIC_URL}/Image/toolwindow.png`,
+          `${process.env.PUBLIC_URL}/Image/usersactivation.png`,
+          `${process.env.PUBLIC_URL}/Image/validkeyactivation.png`,
+          `${process.env.PUBLIC_URL}/Image/videoenchancer.png`
         ]}
+        
         />
         <ProjectCard
         title="LearnReflect Self Improvement System"
