@@ -32,6 +32,13 @@ function MyProjectsPage() {
           "../Image/ProjectCard images/VideoEnchancer.png",
         ]}
         />
+        <ProjectCard
+        title="LearnReflect Self Improvement System"
+        description=""
+        technologies={["Javascript/React, Php, Express"]}
+        images={[
+        ]}
+        />
       
 
       </div>
