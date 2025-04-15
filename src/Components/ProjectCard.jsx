@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Styles from '../css/ProjectCard.module.css'
 
-function ProjectCard({title, description, technologies, images , githublink}) {
+function ProjectCard({title, description, technologies, images , githublink, website}) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const handleprev = () => {
@@ -50,6 +50,12 @@ function ProjectCard({title, description, technologies, images , githublink}) {
             <a href={githublink} target="_blank" rel="noopener noreferrer" className={Styles.link}
             >View on GitHub
             </a>
+            {website && (
+
+                <a href={website} target="_blank" rel="noopener noreferrer" className={Styles.link}
+                >View Website
+            </a>
+            )}
         </div>
         </div>
     )

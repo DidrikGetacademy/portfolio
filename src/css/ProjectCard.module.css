@@ -59,13 +59,16 @@
 }
 .image {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: scale-down;
     border-radius: 8px;
     transition: opacity 0.3s ease;
   }
+  .image:hover {
+    transform: scale(1.10);
+  }
   .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.09);
   }
   
  
@@ -78,7 +81,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  
 
   
   .link {
@@ -93,8 +95,8 @@
   
   
   .title {
-    font-size: 1.5rem;
-    margin-top: -40px;
+    font-size: 1rem;
+    margin-top: -70px;
     
   }
   
@@ -109,6 +111,7 @@
     word-wrap: break-word; /* Ensures long words break within card */
     overflow-wrap: break-word; /* Modern equivalent / fallback */
     width: 100%; /* Take full width of the container */
+    height: auto;
     box-sizing: border-box; /* Ensures padding is included in width */
   }
   

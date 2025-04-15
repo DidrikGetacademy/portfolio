@@ -41,7 +41,7 @@
   align-items: center;  
   justify-content: center; 
   width: 100%; 
-  padding-bottom: 20px;  /* Remove this padding, as it's no longer at the bottom */
+  padding-bottom: 20px;  
 }
 
 .bottom-NavigationIcon ul {
