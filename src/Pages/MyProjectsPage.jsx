@@ -84,6 +84,34 @@ function MyProjectsPage() {
           generator,
         ]}
         />
+        <ProjectCard
+        title="UNet-Audio-seperation-Model"
+        technologies={["Python"]}
+        />
+        <ProjectCard
+        title="Python-GUI-Calculator"
+        technologies={["Python"]}
+        />
+        <ProjectCard
+        title="CryptoMarket-Advantage-GUI"
+        technologies={["Python"]}
+        />
+        <ProjectCard
+        title="Pokemon Battle website"
+        technologies={["Vanilla Javascript"]}
+        />
+        <ProjectCard
+        title="BlackJack"
+        technologies={["C#"]}
+        />
+        <ProjectCard
+        title="FinancialSystem-Project"
+        technologies={["Vanilla Javascript/Express"]}
+        />
+        <ProjectCard
+        title="U-Net-GAN-VideoUpscaling-Architecture"
+        technologies={["Python"]}
+        />
       
 
       </div>
