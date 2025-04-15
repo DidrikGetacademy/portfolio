@@ -31,6 +31,7 @@ function MyProjectsPage() {
         technologies={["Python","Php"]}
         githublink="https://github.com/DidrikGetacademy/VideoEnchancer-GUI-Software"
         images={[
+          toolwindow,
           register,
           keycode,
           activationkeyconnectedtouser,
@@ -44,7 +45,6 @@ function MyProjectsPage() {
           login,
           registration,
           secret_key_appdata,
-          toolwindow,
           usersactivation,
           validkeyactivation,
           videoenchancer
