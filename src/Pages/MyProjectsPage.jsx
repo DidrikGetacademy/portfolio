@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "../Components/ProjectCard";
-import Styles from '../css/ProjectCard.module.css'
+import Styles from '../css/ProjectCard.module.css';
 import register from "../Image/registration.png";
 import keycode from "../Image/keycode.png";
 import activationkeyconnectedtouser from "../Image/activationkeyconnectedtouser.png";
