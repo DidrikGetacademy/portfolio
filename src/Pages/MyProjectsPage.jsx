@@ -14,9 +14,9 @@ function MyProjectsPage() {
         technologies={["Python","Php"]}
         githublink="https://github.com/DidrikGetacademy/VideoEnchancer-GUI-Software"
         images={[
-          "/Image/ProjectCard-images/register.png",
-          "/Image/ProjectCard-images/keycode.png",
-          "/Image/ProjectCard-images/activationkeyconnectedtouser.png",
+          "/portfolio/Image/ProjectCard-images/register.png",
+          "/portfolio/Image/ProjectCard-images/keycode.png",
+          "/portfolio/Image/ProjectCard-images/activationkeyconnectedtouser.png",
           "/Image/ProjectCard-images/registrationdatabase.png",
           "/Image/ProjectCard-images/activationwindow.png",
           "/Image/ProjectCard-images/Aktiveringsnøkkel.png",
