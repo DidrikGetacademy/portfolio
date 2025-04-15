@@ -1,7 +1,13 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1849fb77.css",
-    "main.js": "/portfolio/static/js/main.e00d6f77.js",
+    "main.js": "/portfolio/static/js/main.b31e88f1.js",
+    "static/media/moviespin4.png": "/portfolio/static/media/moviespin4.88e4ae08991a4e3c998a.png",
+    "static/media/moviespin5.png": "/portfolio/static/media/moviespin5.2e1d8ebd56f2031d9724.png",
+    "static/media/moviespinruller.png": "/portfolio/static/media/moviespinruller.b797be6b320ca57e0d27.png",
+    "static/media/frontpage.png": "/portfolio/static/media/frontpage.d11717d14ba0c5164c69.png",
+    "static/media/moviespin1.png": "/portfolio/static/media/moviespin1.429ac05d62edaa012d7e.png",
+    "static/media/moviespin3.png": "/portfolio/static/media/moviespin3.4feeb11b9c4d73de15d1.png",
     "static/media/brukerprofil.png": "/portfolio/static/media/brukerprofil.63fcbd7c03920a78ffa2.png",
     "static/media/validkeyactivation.png": "/portfolio/static/media/validkeyactivation.d466284ca61404b35c1f.png",
     "static/media/login.png": "/portfolio/static/media/login.d611cfa29e945ae446f8.png",
@@ -11,6 +17,7 @@
     "static/media/toolwindow.png": "/portfolio/static/media/toolwindow.b456038bceea525551ea.png",
     "static/media/1701865582325 (1)_RealESR_Gx4_Resize-100.jpg": "/portfolio/static/media/1701865582325 (1)_RealESR_Gx4_Resize-100.2f8f169dbd57ec66e5d5.jpg",
     "static/media/Arrow2.png": "/portfolio/static/media/Arrow2.96e8df719a14ee871029.png",
+    "static/media/generator.png": "/portfolio/static/media/generator.79921eef4d4833aacdcd.png",
     "static/media/videoenchancer.png": "/portfolio/static/media/videoenchancer.803dd83bf308812f6ff8.png",
     "static/media/Flag.jpg": "/portfolio/static/media/Flag.b636708fe6e2767a22bf.jpg",
     "static/media/registrationdatabase.png": "/portfolio/static/media/registrationdatabase.1458ac8c90b9c99e1d28.png",
@@ -21,10 +28,10 @@
     "static/media/usersactivation.png": "/portfolio/static/media/usersactivation.486a58c6c32cfa3e8ed3.png",
     "index.html": "/portfolio/index.html",
     "main.1849fb77.css.map": "/portfolio/static/css/main.1849fb77.css.map",
-    "main.e00d6f77.js.map": "/portfolio/static/js/main.e00d6f77.js.map"
+    "main.b31e88f1.js.map": "/portfolio/static/js/main.b31e88f1.js.map"
   },
   "entrypoints": [
     "static/css/main.1849fb77.css",
-    "static/js/main.e00d6f77.js"
+    "static/js/main.b31e88f1.js"
   ]
 }
