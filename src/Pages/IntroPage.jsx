@@ -24,8 +24,6 @@ function IntroPage() {
   }
 
   const handleScrollToPage3 = () => {
-    // Add logic for scrolling to page 3 here
-    console.log("Scrolling to page 3");
   };
 
   return (
