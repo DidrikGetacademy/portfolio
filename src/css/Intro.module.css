@@ -91,16 +91,16 @@ body, html {
 .extra-site {
   position: absolute;
   width: 100%;
-  height: 50%;
-  background-image: url('../Image/Flag.jpg'); 
-  transition: height 2s ease; 
+  height: 100%;
+  background-image: url('../Image/123.png'); 
+  transition: height 6s ease; 
 
 }
 
 .extra-site.top {
   top: 0;
   transform-origin: top;
-  animation: openTop 2s forwards;
+  animation: openTop 6s forwards;
 
 
 }
@@ -109,13 +109,13 @@ body, html {
   bottom: 0;
   width: 100%;
   transform-origin: bottom;
-  animation: openBottom 2s forwards;
+  animation: openBottom 6s forwards;
 }
 
 .content {
   text-align: center;
   opacity: 0;
-  animation: fadeIn 1s forwards 2s;
+  animation: fadeIn 2s forwards 2s;
   z-index: 2;
   position: relative;
   color: rgb(255, 0, 0);
@@ -217,4 +217,10 @@ p{
   font-size: xx-large;
   position: relative;
   top: 100px;
+}
+
+
+.Pbio{
+
+  
 }

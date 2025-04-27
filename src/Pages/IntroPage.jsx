@@ -40,11 +40,8 @@ function IntroPage() {
 
           <div className={Styles["bio-Intro"]}>
             <br />
-            <p>
-              "I am a 24-year-old developer from Norway with a passion for
-              programming. I'm inspired by the endless possibilities of coding
-              and love to explore new challenges. For me, this isn't just a 9-5
-              job—it's a hobby and a lifelong learning journey."
+            <p className={Styles["Pbio"]}>
+            I'm a 24-year-old developer from Norway with a deep passion for programming and technology. Driven by the endless possibilities of code, I thrive on tackling new challenges and pushing my skills further. For me, software development is more than just a profession — it's a hobby, a passion, and a lifelong journey of learning and innovation
             </p>
           </div>
         </div>
@@ -62,7 +59,7 @@ function IntroPage() {
 
       <div id="Work-Section" className={`${Styles["work-Section"]} ${sectionVisible ? Styles.visible : ""}`}>
         <div className={Styles["work-Content"]}>
-          <h2 className={Styles["h1-WorkSection"]}>My Projects</h2>
+          <h2 className={Styles["h1-WorkSection"]}>Programming Projects & Experience</h2>
           {sectionVisible && (
             <>
             <MyProjectsPage/>
