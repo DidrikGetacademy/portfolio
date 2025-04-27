@@ -111,9 +111,31 @@ function MyProjectsPage() {
         images={[
         ]}
         />
-       
-      
-
+        <ProjectCard
+        title="CryptoMarket-Advantage-GUI"
+        description=""
+        technologies={["Python"]}
+        githublink=""
+        images={[
+        ]}
+        />
+        <ProjectCard
+        title="BlackJack"
+        description=""
+        technologies={["C#"]}
+        githublink=""
+        images={[
+        ]}
+        />
+        <ProjectCard
+        title="Microsoft Business Central 365 Dynamics"
+        description=""
+        technologies={["AL"]}
+        githublink=""
+        images={[
+          
+        ]}
+        />
       </div>
     </div>
   );
