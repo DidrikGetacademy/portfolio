@@ -57,7 +57,7 @@ function IntroPage() {
 
       <div id="Work-Section" className={`${Styles["work-Section"]} ${sectionVisible ? Styles.visible : ""}`}>
         <div className={Styles["work-Content"]}>
-          <h2 className={Styles["h1-WorkSection"]}>Programming Projects & Experience</h2>
+          <h2 className={Styles["h1-WorkSection"]}>Projects & Experience</h2>
           {sectionVisible && (
             <>
             <MyProjectsPage/>

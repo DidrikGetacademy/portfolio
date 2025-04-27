@@ -59,7 +59,7 @@ function ProjectCard({title, description, technologies, images , githublink, web
                 )}
               </div>
           
-            </div>  // close the full card here ✅
+            </div> 
           )          
 }
 export default ProjectCard
