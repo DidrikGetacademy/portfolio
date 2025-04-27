@@ -25,6 +25,15 @@ import moviespin5 from '../Image/moviespin5.png';
 import moviespinruller from '../Image/moviespinruller.png';
 import generator from '../Image/generator.png';
 import frontpage from '../Image/frontpage.png';
+import LR1 from '../Image/LR1.png';
+import LR2 from '../Image/LR2.png';
+import LR3 from '../Image/LR3.PNG';
+import LR4 from '../Image/LR4.PNG';
+import LR5 from '../Image/LR5.png';
+import LR6 from '../Image/LR6.png';
+import LR7 from '../Image/LR7.png';
+import LR8 from '../Image/LR8.png';
+
 function MyProjectsPage() {
 
 
@@ -66,6 +75,16 @@ function MyProjectsPage() {
         githublink="https://github.com/DidrikGetacademy/LearnReflect-Project"
         website="https://learnreflects.com/"
         images={[
+          LR1,
+          LR2,
+          LR3,
+          LR4,
+          LR5,
+          LR6,
+          LR7,
+          LR8,
+
+
         ]}
         />
         <ProjectCard
@@ -82,6 +101,14 @@ function MyProjectsPage() {
           moviespin5,
           moviespinruller,
           generator,
+        ]}
+        />
+        <ProjectCard
+        title="U-NET - Vocal Isolation Model"
+        description=""
+        technologies={["Python"]}
+        githublink=""
+        images={[
         ]}
         />
        

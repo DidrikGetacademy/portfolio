@@ -161,7 +161,7 @@ p{
   position: absolute;
   bottom: -100%;
   width: 100%;
-  min-height: 100vh;  /* ensures the section covers at least the full viewport height */
+  min-height: 100vh;  
   background-color: black;
   color: white;
   transition: bottom 2s ease;
@@ -196,7 +196,7 @@ p{
   height: 100%;
 }
 
-/* Remove duplicate NavigationImage styles and keep only one */
+
 .NavigationImage {
   height: 50px;
   width: 50px;
@@ -217,6 +217,10 @@ p{
   font-size: xx-large;
   position: relative;
   top: 100px;
+}
+.work-Section.fadeOut {
+  opacity: 0;
+  transition: opacity 1s ease, bottom 2s ease;
 }
 
 

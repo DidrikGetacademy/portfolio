@@ -98,17 +98,18 @@
   }
   
   .description {
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 0.95rem; 
+    line-height: 1.6;
     text-align: left; 
-    color: #d1d1d1;
-    padding: 0 10px; 
-    margin-bottom: 5px;
+    color: #cccccc; 
+    padding: 0 15px;
+    margin: 15px 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300; 
+    letter-spacing: 0.3px; 
     word-wrap: break-word; 
     overflow-wrap: break-word; 
     width: 100%; 
-    height: auto;
     box-sizing: border-box; 
   }
   
