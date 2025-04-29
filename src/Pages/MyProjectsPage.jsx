@@ -105,53 +105,60 @@ function MyProjectsPage() {
         />
         <ProjectCard
         title="U-NET - Vocal Isolation Model"
-        description=""
+        description="implementation of a UNet-based model for audio source separation, focusing on isolating vocals from music tracks. It includes custom datasets, advanced loss functions (e.g., perceptual, STFT, and multi-scale losses), and support for MUSDB18 and DSD100 datasets. The project leverages PyTorch, integrates memory usage logg"
         technologies={["Python"]}
-        githublink=""
+        githublink="https://github.com/DidrikGetacademy/UNet-Audio-seperation-Model"
         images={[
         ]}
         />
         <ProjectCard
         title="CryptoMarket-Advantage-GUI"
-        description=""
+        description="GOD's eye in crypto version🚀 Ultimate Trading AI Suite – Sniperbot | Frontrunner | AI Agent | Wallet & Telegram Tracking"
         technologies={["Python"]}
-        githublink=""
+        githublink="https://github.com/DidrikGetacademy/CryptoMarket-Advantage-GUI"
         images={[
         ]}
         />
         <ProjectCard
         title="BlackJack"
-        description=""
+        description="Blackjack Console application (Player vs Dealer(bot))"
         technologies={["C#"]}
-        githublink=""
+        githublink="https://github.com/DidrikGetacademy/BlackJack"
         images={[
         ]}
         />
         <ProjectCard
         title="Microsoft Business Central 365 Dynamics"
-        description=""
+        description="Developed and implemented customized AL code in Microsoft Dynamics 365 Business Central to meet client-specific needs in finance and logistics. The project included extending existing tables, creating new pages and reports, and integrating with external systems. Completed as part of my role at a consulting company."
         technologies={["AL"]}
-        githublink=""
+        githublink="https://github.com/DidrikGetacademy/Microsoft-Business-Central-Dynamics-365"
         images={[
           
         ]}
         />
         <ProjectCard
         title="Pokemon"
-        description=""
+        description="Pokemon JS nettside, pokemon inventory, pokemon vs pokemon battle setup, attack damage & Health"
         technologies={["Javascript-Vanilla"]}
-        githublink=""
+        githublink="https://github.com/DidrikGetacademy/Pokemon-JS-"
         images={[
 
         ]}
         />
         <ProjectCard
         title="Python-GUI-Calculator"
-        description=""
+        description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
         technologies={["python", "tkinter"]}
-        githublink=""
+        githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
         images={[
-
+        ]}
+        />
+        <ProjectCard
+        title="HuggingFace AI-"
+        description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
+        technologies={["python", "tkinter"]}
+        githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
+        images={[
         ]}
         />
 
