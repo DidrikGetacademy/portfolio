@@ -1,0 +1,37 @@
+.imgcontainer {
+  display: flex;
+  justify-content: center; /* center the icons */
+  align-items: center;
+  flex-wrap: nowrap; /* don't wrap onto next line */
+  gap: 20px; /* space between icons */
+  width: 100%; /* full width */
+  max-width: 400px; /* optional limit */
+  margin: auto; 
+}
+
+.socialicon img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.socialicon img:hover {
+  transform: scale(1.2); /* zoom effect */
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)); /* glow effect */
+}
+
+/* Optional: Responsive adjustments for mobile */
+@media (max-width: 480px) {
+  .socialicon img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+  }
+
+  .socialicon img:hover {
+    transform: scale(1.2); 
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)); 
+  }
+}

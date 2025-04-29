@@ -3,7 +3,7 @@ import Styles from "../css/Intro.module.css";
 import Didrik from "../Image/1701865582325 (1)_RealESR_Gx4_Resize-100.jpg";
 import NavigationImage from "../Image/Arrow2.png";
 import MyProjectsPage from "./MyProjectsPage";
-
+import LComponent from '../Components/logocomponent'
 function IntroPage() {
   
   const handleScroll = () => {
@@ -25,6 +25,7 @@ function IntroPage() {
       <div className={`${Styles["Intro-Container"]}`}>
         <div className={Styles["Intro-Name"]}>
           <h1 className={Styles.Title}>Didrik Nathaniel Lloyd Aasland Skjelbred</h1>
+      <LComponent/>
           <img alt="ProfilePicture" className={Styles.ProfilePitchure} src={Didrik} />
           <div className={Styles["bio-Intro"]}>
             <p className={Styles["Pbio"]}>
