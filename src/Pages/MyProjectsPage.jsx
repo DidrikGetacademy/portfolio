@@ -27,8 +27,8 @@ import generator from '../Image/generator.png';
 import frontpage from '../Image/frontpage.png';
 import LR1 from '../Image/LR1.png';
 import LR2 from '../Image/LR2.png';
-import LR3 from '../Image/LR3.PNG';
-import LR4 from '../Image/LR4.PNG';
+import LR3 from '../Image/LR3.png';
+import LR4 from '../Image/LR4.png';
 import LR5 from '../Image/LR5.png';
 import LR6 from '../Image/LR6.png';
 import LR7 from '../Image/LR7.png';
@@ -137,18 +137,18 @@ function MyProjectsPage() {
         ]}
         />
         <ProjectCard
-        title=""
+        title="Pokemon"
         description=""
-        technologies={[""]}
+        technologies={["Javascript-Vanilla"]}
         githublink=""
         images={[
 
         ]}
         />
         <ProjectCard
-        title=""
+        title="Python-GUI-Calculator"
         description=""
-        technologies={[""]}
+        technologies={["python", "tkinter"]}
         githublink=""
         images={[
 
