@@ -38,7 +38,7 @@ function MyProjectsPage() {
 
 
   return (
-    <div id="Work-Section" >
+    <div id="ProjectcardSection" >
       <div className={Styles["projects-grid"]}>
         <ProjectCard
         title="LearnReflects Enchancer Software"
@@ -158,6 +158,14 @@ function MyProjectsPage() {
         description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
         technologies={["python", "tkinter"]}
         githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
+        images={[
+        ]}
+        />
+        <ProjectCard
+        title="Financial System"
+        description="FinanceSystem with a frontend(javascript) , backend(C#), created so user can have control over their own finance system"
+        technologies={["Javascript-Vanilla", "C#"]}
+        githublink="https://github.com/DidrikGetacademy/FinancialSystem-Project"
         images={[
         ]}
         />

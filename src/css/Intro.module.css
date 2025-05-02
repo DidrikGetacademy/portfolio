@@ -168,19 +168,8 @@ p{
 }
 
 
-.work-Section.visible {
-  bottom: 0; 
-}
 
 
-.topButton {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(0%) rotate(180deg);
-  z-index: 1000;
-  cursor: pointer;
-}
 
 .bottomButton {
   position: fixed;

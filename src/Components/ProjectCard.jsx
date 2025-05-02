@@ -19,7 +19,6 @@ function ProjectCard({title, description, technologies, images , githublink, web
     return (
   
             <div className={Styles.card}>
-              
               <div className={Styles.carousel}>
                 {images[currentImageIndex] && (
                   <a href={images[currentImageIndex]} target="_blank" rel="noopener noreferrer">
