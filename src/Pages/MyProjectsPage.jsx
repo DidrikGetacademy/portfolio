@@ -47,6 +47,14 @@ import crypto5 from '../Image/crypto4.png'
 import crypto6 from '../Image/crypto5.png'
 import crypto7 from '../Image/crypto7.png'
 import crypto8 from '../Image/crypto9.png'
+import crypto10 from '../Image/crypto10.png'
+import crypto11 from '../Image/crypto11.png'
+import huggingface from '../Image/huggingface.png'
+import huggingface1 from '../Image/huggingface2.png'
+import huggingface2 from '../Image/huggingface3.png'
+import huggingface3 from '../Image/huggingface4.png'
+import kalkulator1 from '../image/kalkulator.png';
+import kalkulator from '../Image/kalkulator.png'
 function MyProjectsPage() {
 
 
@@ -159,11 +167,36 @@ function MyProjectsPage() {
           crypto5,
           crypto6,
           crypto7,
-          crypto8
+          crypto8,
+          crypto10,
+          crypto11
+        ]}
+        />
+
+        <ProjectCard
+        title="HuggingFace AI-"
+        description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
+        technologies={["python", "tkinter"]}
+        githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
+        images={[
+          huggingface,
+          huggingface1,
+          huggingface2,
+          huggingface3
         ]}
         />
 
 
+      <ProjectCard
+              title="Python-GUI-Calculator"
+              description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
+              technologies={["python", "tkinter"]}
+              githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
+              images={[
+                kalkulator,
+                kalkulator1
+              ]}
+              />
         <ProjectCard
         title="Pokemon"
         description="Pokemon JS nettside, pokemon inventory, pokemon vs pokemon battle setup, attack damage & Health"
@@ -173,22 +206,8 @@ function MyProjectsPage() {
 
         ]}
         />
-        <ProjectCard
-        title="Python-GUI-Calculator"
-        description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
-        technologies={["python", "tkinter"]}
-        githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
-        images={[
-        ]}
-        />
-        <ProjectCard
-        title="HuggingFace AI-"
-        description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
-        technologies={["python", "tkinter"]}
-        githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
-        images={[
-        ]}
-        />
+
+
         <ProjectCard
         title="Financial System"
         description="FinanceSystem with a frontend(javascript) , backend(C#), created so user can have control over their own finance system"
