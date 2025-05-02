@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1080e785.css",
-    "main.js": "/portfolio/static/js/main.3ad0be28.js",
+    "main.js": "/portfolio/static/js/main.f99e88a3.js",
     "static/media/moviespin4.png": "/portfolio/static/media/moviespin4.88e4ae08991a4e3c998a.png",
     "static/media/moviespin5.png": "/portfolio/static/media/moviespin5.2e1d8ebd56f2031d9724.png",
     "static/media/moviespinruller.png": "/portfolio/static/media/moviespinruller.b797be6b320ca57e0d27.png",
@@ -16,11 +16,16 @@
     "static/media/activationwindow.png": "/portfolio/static/media/activationwindow.a0746c3b59aea944af6f.png",
     "static/media/toolwindow.png": "/portfolio/static/media/toolwindow.b456038bceea525551ea.png",
     "static/media/123.png": "/portfolio/static/media/123.92aa06b0acfd48466dc3.png",
+    "static/media/huggingface.png": "/portfolio/static/media/huggingface.a4de677dd4f64661a9db.png",
     "static/media/1701865582325 (1)_RealESR_Gx4_Resize-100.jpg": "/portfolio/static/media/1701865582325 (1)_RealESR_Gx4_Resize-100.2f8f169dbd57ec66e5d5.jpg",
     "static/media/unet.png": "/portfolio/static/media/unet.4bed396d78481a8f7cca.png",
     "static/media/Arrow2.png": "/portfolio/static/media/Arrow2.96e8df719a14ee871029.png",
     "static/media/generator.png": "/portfolio/static/media/generator.79921eef4d4833aacdcd.png",
     "static/media/videoenchancer.png": "/portfolio/static/media/videoenchancer.803dd83bf308812f6ff8.png",
+    "static/media/huggingface2.png": "/portfolio/static/media/huggingface2.1f928f339e87d74e17d1.png",
+    "static/media/crypto10.png": "/portfolio/static/media/crypto10.8a789bfcb2f40e7d7855.png",
+    "static/media/huggingface3.png": "/portfolio/static/media/huggingface3.5d2f01d2b806a936c3a5.png",
+    "static/media/huggingface4.png": "/portfolio/static/media/huggingface4.5d2f01d2b806a936c3a5.png",
     "static/media/u-net-architecture.png": "/portfolio/static/media/u-net-architecture.f0e9aa890b967da85a7b.png",
     "static/media/LR5.png": "/portfolio/static/media/LR5.2de87e270e7bd7e14cc0.png",
     "static/media/LR6.png": "/portfolio/static/media/LR6.2de87e270e7bd7e14cc0.png",
@@ -41,6 +46,7 @@
     "static/media/crypto3.png": "/portfolio/static/media/crypto3.2c013787340f597708fe.png",
     "static/media/LR4.png": "/portfolio/static/media/LR4.3e6524272785d28add7e.png",
     "static/media/crypto7.png": "/portfolio/static/media/crypto7.3624b820af47b50e31eb.png",
+    "static/media/crypto11.png": "/portfolio/static/media/crypto11.b7abbdc6e841a1e3a75c.png",
     "static/media/LR3.png": "/portfolio/static/media/LR3.3340a13cf5fac848e205.png",
     "static/media/blackjack1.png": "/portfolio/static/media/blackjack1.36d9743257e1c42a831f.png",
     "static/media/crypto9.png": "/portfolio/static/media/crypto9.7f28a24078bd9d1f7185.png",
@@ -51,10 +57,10 @@
     "static/media/blackjack3.png": "/portfolio/static/media/blackjack3.27dae92f1df283b91577.png",
     "index.html": "/portfolio/index.html",
     "main.1080e785.css.map": "/portfolio/static/css/main.1080e785.css.map",
-    "main.3ad0be28.js.map": "/portfolio/static/js/main.3ad0be28.js.map"
+    "main.f99e88a3.js.map": "/portfolio/static/js/main.f99e88a3.js.map"
   },
   "entrypoints": [
     "static/css/main.1080e785.css",
-    "static/js/main.3ad0be28.js"
+    "static/js/main.f99e88a3.js"
   ]
 }
