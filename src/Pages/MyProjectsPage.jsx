@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "../Components/ProjectCard";
-import Styles from '../css/ProjectCard.module.css';
+import Styles from '../css/Projectpage.module.css';
 import register from "../Image/registration.png";
 import keycode from "../Image/keycode.png";
 import activationkeyconnectedtouser from "../Image/activationkeyconnectedtouser.png";
@@ -33,7 +33,7 @@ import LR5 from '../Image/LR5.png';
 import LR6 from '../Image/LR6.png';
 import LR7 from '../Image/LR7.png';
 import LR8 from '../Image/LR8.png';
-
+import AL from '../Image/AL.png'
 function MyProjectsPage() {
 
 
@@ -133,7 +133,7 @@ function MyProjectsPage() {
         technologies={["AL"]}
         githublink="https://github.com/DidrikGetacademy/Microsoft-Business-Central-Dynamics-365"
         images={[
-          
+          AL,
         ]}
         />
         <ProjectCard

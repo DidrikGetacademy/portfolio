@@ -1,0 +1,16 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* exact card width */
+  gap: 20px;
+}
+.projects-grid {
+  align-items: stretch; /* Ensures all grid items match row height */
+}
+
+#ProjectcardSection {
+  background-color: black;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}

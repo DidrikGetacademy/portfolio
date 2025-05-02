@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from '../css/ProjectCard.module.css'
+import Styles from '../css/ProjectCardComponent.module.css'
 
 function ProjectCard({title, description, technologies, images , githublink, website}) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
