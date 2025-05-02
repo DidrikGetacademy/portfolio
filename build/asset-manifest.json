@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5769260f.css",
-    "main.js": "/portfolio/static/js/main.42d0ad12.js",
+    "main.css": "/portfolio/static/css/main.1080e785.css",
+    "main.js": "/portfolio/static/js/main.3ad0be28.js",
     "static/media/moviespin4.png": "/portfolio/static/media/moviespin4.88e4ae08991a4e3c998a.png",
     "static/media/moviespin5.png": "/portfolio/static/media/moviespin5.2e1d8ebd56f2031d9724.png",
     "static/media/moviespinruller.png": "/portfolio/static/media/moviespinruller.b797be6b320ca57e0d27.png",
@@ -17,30 +17,44 @@
     "static/media/toolwindow.png": "/portfolio/static/media/toolwindow.b456038bceea525551ea.png",
     "static/media/123.png": "/portfolio/static/media/123.92aa06b0acfd48466dc3.png",
     "static/media/1701865582325 (1)_RealESR_Gx4_Resize-100.jpg": "/portfolio/static/media/1701865582325 (1)_RealESR_Gx4_Resize-100.2f8f169dbd57ec66e5d5.jpg",
+    "static/media/unet.png": "/portfolio/static/media/unet.4bed396d78481a8f7cca.png",
     "static/media/Arrow2.png": "/portfolio/static/media/Arrow2.96e8df719a14ee871029.png",
     "static/media/generator.png": "/portfolio/static/media/generator.79921eef4d4833aacdcd.png",
     "static/media/videoenchancer.png": "/portfolio/static/media/videoenchancer.803dd83bf308812f6ff8.png",
+    "static/media/u-net-architecture.png": "/portfolio/static/media/u-net-architecture.f0e9aa890b967da85a7b.png",
     "static/media/LR5.png": "/portfolio/static/media/LR5.2de87e270e7bd7e14cc0.png",
     "static/media/LR6.png": "/portfolio/static/media/LR6.2de87e270e7bd7e14cc0.png",
     "static/media/registrationdatabase.png": "/portfolio/static/media/registrationdatabase.1458ac8c90b9c99e1d28.png",
     "static/media/activationkeyconnectedtouser.png": "/portfolio/static/media/activationkeyconnectedtouser.214678fa10d3432dd381.png",
+    "static/media/crypto5.png": "/portfolio/static/media/crypto5.6bacd5f89272aa4facf4.png",
     "static/media/LR2.png": "/portfolio/static/media/LR2.e34ab31ad3c01a49c63f.png",
     "static/media/aktiveringsnøkkel.png": "/portfolio/static/media/aktiveringsnøkkel.86c52152678c3b58d3b9.png",
     "static/media/databaseactivationkey.png": "/portfolio/static/media/databaseactivationkey.56cf1bd7cf179c5fe5ab.png",
     "static/media/LR8.png": "/portfolio/static/media/LR8.51aeb73f758b0500eaed.png",
+    "static/media/AL.png": "/portfolio/static/media/AL.80b319e5abd9bd6464ca.png",
+    "static/media/crypto4.png": "/portfolio/static/media/crypto4.64e7bac454dc37d77464.png",
     "static/media/xx.png": "/portfolio/static/media/xx.97d93d72dca3b8e208e7.png",
+    "static/media/crypto2.png": "/portfolio/static/media/crypto2.c0bbad184c785342ba78.png",
     "static/media/LR7.png": "/portfolio/static/media/LR7.12e62b3fe9469a2d02ea.png",
+    "static/media/crypto.png": "/portfolio/static/media/crypto.f6123c5ed9b88b8434e6.png",
     "static/media/LR1.png": "/portfolio/static/media/LR1.e14395a0135a6dae0005.png",
+    "static/media/crypto3.png": "/portfolio/static/media/crypto3.2c013787340f597708fe.png",
     "static/media/LR4.png": "/portfolio/static/media/LR4.3e6524272785d28add7e.png",
+    "static/media/crypto7.png": "/portfolio/static/media/crypto7.3624b820af47b50e31eb.png",
     "static/media/LR3.png": "/portfolio/static/media/LR3.3340a13cf5fac848e205.png",
+    "static/media/blackjack1.png": "/portfolio/static/media/blackjack1.36d9743257e1c42a831f.png",
+    "static/media/crypto9.png": "/portfolio/static/media/crypto9.7f28a24078bd9d1f7185.png",
     "static/media/appdatafolder.png": "/portfolio/static/media/appdatafolder.ec74d6849a7a0a81892d.png",
     "static/media/usersactivation.png": "/portfolio/static/media/usersactivation.486a58c6c32cfa3e8ed3.png",
+    "static/media/blackjack.png": "/portfolio/static/media/blackjack.cf0e7a4ea0ac11a1b1a8.png",
+    "static/media/blackjack2.png": "/portfolio/static/media/blackjack2.11c5a6c82b56dbb8584f.png",
+    "static/media/blackjack3.png": "/portfolio/static/media/blackjack3.27dae92f1df283b91577.png",
     "index.html": "/portfolio/index.html",
-    "main.5769260f.css.map": "/portfolio/static/css/main.5769260f.css.map",
-    "main.42d0ad12.js.map": "/portfolio/static/js/main.42d0ad12.js.map"
+    "main.1080e785.css.map": "/portfolio/static/css/main.1080e785.css.map",
+    "main.3ad0be28.js.map": "/portfolio/static/js/main.3ad0be28.js.map"
   },
   "entrypoints": [
-    "static/css/main.5769260f.css",
-    "static/js/main.42d0ad12.js"
+    "static/css/main.1080e785.css",
+    "static/js/main.3ad0be28.js"
   ]
 }
