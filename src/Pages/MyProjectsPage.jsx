@@ -33,7 +33,20 @@ import LR5 from '../Image/LR5.png';
 import LR6 from '../Image/LR6.png';
 import LR7 from '../Image/LR7.png';
 import LR8 from '../Image/LR8.png';
-import AL from '../Image/AL.png'
+import AL from '../Image/AL.png';
+import blackjack from '../Image/blackjack.png';
+import blackjack1 from '../Image/blackjack1.png';
+import blackjack2 from '../Image/blackjack2.png';
+import blackjack3 from '../Image/blackjack3.png';
+import unet from '../Image/u-net-architecture.png'
+import unet2 from '../Image/unet.png'
+import crypto2 from '../Image/crypto.png'
+import crypto3 from '../Image/crypto2.png'
+import crypto4 from '../Image/crypto3.png'
+import crypto5 from '../Image/crypto4.png'
+import crypto6 from '../Image/crypto5.png'
+import crypto7 from '../Image/crypto7.png'
+import crypto8 from '../Image/crypto9.png'
 function MyProjectsPage() {
 
 
@@ -103,31 +116,7 @@ function MyProjectsPage() {
           generator,
         ]}
         />
-        <ProjectCard
-        title="U-NET - Vocal Isolation Model"
-        description="implementation of a UNet-based model for audio source separation, focusing on isolating vocals from music tracks. It includes custom datasets, advanced loss functions (e.g., perceptual, STFT, and multi-scale losses), and support for MUSDB18 and DSD100 datasets. The project leverages PyTorch, integrates memory usage logg"
-        technologies={["Python"]}
-        githublink="https://github.com/DidrikGetacademy/UNet-Audio-seperation-Model"
-        images={[
-        ]}
-        />
-        <ProjectCard
-        title="CryptoMarket-Advantage-GUI"
-        description="GOD's eye in crypto version🚀 Ultimate Trading AI Suite – Sniperbot | Frontrunner | AI Agent | Wallet & Telegram Tracking"
-        technologies={["Python"]}
-        githublink="https://github.com/DidrikGetacademy/CryptoMarket-Advantage-GUI"
-        images={[
-        ]}
-        />
-        <ProjectCard
-        title="BlackJack"
-        description="Blackjack Console application (Player vs Dealer(bot))"
-        technologies={["C#"]}
-        githublink="https://github.com/DidrikGetacademy/BlackJack"
-        images={[
-        ]}
-        />
-        <ProjectCard
+          <ProjectCard
         title="Microsoft Business Central 365 Dynamics"
         description="Developed and implemented customized AL code in Microsoft Dynamics 365 Business Central to meet client-specific needs in finance and logistics. The project included extending existing tables, creating new pages and reports, and integrating with external systems. Completed as part of my role at a consulting company."
         technologies={["AL"]}
@@ -136,6 +125,45 @@ function MyProjectsPage() {
           AL,
         ]}
         />
+        <ProjectCard
+        title="BlackJack"
+        description="Blackjack Console application (Player vs Dealer(bot))"
+        technologies={["C#"]}
+        githublink="https://github.com/DidrikGetacademy/BlackJack"
+        images={[
+          blackjack,
+          blackjack1,
+          blackjack2,
+          blackjack3
+        ]}
+        />
+        <ProjectCard
+        title="U-NET - Vocal Isolation Model"
+        description="implementation of a UNet-based model for audio source separation, focusing on isolating vocals from music tracks. It includes custom datasets, advanced loss functions (e.g., perceptual, STFT, and multi-scale losses), and support for MUSDB18 and DSD100 datasets. The project leverages PyTorch, integrates memory usage logg"
+        technologies={["Python"]}
+        githublink="https://github.com/DidrikGetacademy/UNet-Audio-seperation-Model"
+        images={[
+          unet,
+          unet2
+        ]}
+        />
+        <ProjectCard
+        title="CryptoMarket-Advantage-GUI"
+        description="GOD's eye in crypto version🚀 Ultimate Trading AI Suite – Sniperbot | Frontrunner | AI Agent | Wallet & Telegram Tracking"
+        technologies={["Python"]}
+        githublink="https://github.com/DidrikGetacademy/CryptoMarket-Advantage-GUI"
+        images={[
+          crypto2,
+          crypto3,
+          crypto4,
+          crypto5,
+          crypto6,
+          crypto7,
+          crypto8
+        ]}
+        />
+
+
         <ProjectCard
         title="Pokemon"
         description="Pokemon JS nettside, pokemon inventory, pokemon vs pokemon battle setup, attack damage & Health"
