@@ -53,7 +53,7 @@ import huggingface from '../Image/huggingface.png'
 import huggingface1 from '../Image/huggingface2.png'
 import huggingface2 from '../Image/huggingface3.png'
 import huggingface3 from '../Image/huggingface4.png'
-import kalkulator1 from '../image/kalkulator.png';
+import kalkulator2 from '../Image/kalkulator2.png';
 import kalkulator from '../Image/kalkulator.png'
 function MyProjectsPage() {
 
@@ -185,8 +185,6 @@ function MyProjectsPage() {
           huggingface3
         ]}
         />
-
-
       <ProjectCard
               title="Python-GUI-Calculator"
               description="this project is a basic calculator application built with Python and a graphical user interface (GUI) using the tkinter library. The calculator provides essential arithmetic operations such as addition, subtraction, multiplication, and division. The intuitive interface allows users to input numbers and perform calculations seamlessly."
@@ -194,7 +192,7 @@ function MyProjectsPage() {
               githublink="https://github.com/DidrikGetacademy/Python-GUI-Calculator"
               images={[
                 kalkulator,
-                kalkulator1
+                kalkulator2
               ]}
               />
         <ProjectCard
