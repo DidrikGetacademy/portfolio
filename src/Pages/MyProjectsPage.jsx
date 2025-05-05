@@ -65,6 +65,9 @@ import pokemon7 from '../Image/pokemon7.png'
 import pokemon8 from '../Image/pokemon8.png'
 import pokemon9 from '../Image/pokemon9.png'
 import pokemon10 from '../Image/pokemon10.png'
+import financial from '../Image/financial.png'
+import financial1 from '../Image/financial1.png'
+import financial2 from '../Image/financial2.png'
 function MyProjectsPage() {
   return (
     <div id="ProjectcardSection" >
@@ -229,8 +232,12 @@ function MyProjectsPage() {
         technologies={["Javascript-Vanilla", "C#"]}
         githublink="https://github.com/DidrikGetacademy/FinancialSystem-Project"
         images={[
+          financial,
+          financial1,
+          financial2
         ]}
         />
+
 
         
       </div>
