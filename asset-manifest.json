@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1080e785.css",
-    "main.js": "/portfolio/static/js/main.cdfe111d.js",
+    "main.js": "/portfolio/static/js/main.0687a4a7.js",
     "static/media/moviespin4.png": "/portfolio/static/media/moviespin4.88e4ae08991a4e3c998a.png",
     "static/media/moviespin5.png": "/portfolio/static/media/moviespin5.2e1d8ebd56f2031d9724.png",
     "static/media/moviespinruller.png": "/portfolio/static/media/moviespinruller.b797be6b320ca57e0d27.png",
@@ -26,16 +26,23 @@
     "static/media/crypto10.png": "/portfolio/static/media/crypto10.8a789bfcb2f40e7d7855.png",
     "static/media/huggingface3.png": "/portfolio/static/media/huggingface3.5d2f01d2b806a936c3a5.png",
     "static/media/huggingface4.png": "/portfolio/static/media/huggingface4.5d2f01d2b806a936c3a5.png",
+    "static/media/Pokemon1.png": "/portfolio/static/media/Pokemon1.09809633496644d8f194.png",
     "static/media/u-net-architecture.png": "/portfolio/static/media/u-net-architecture.f0e9aa890b967da85a7b.png",
     "static/media/LR5.png": "/portfolio/static/media/LR5.2de87e270e7bd7e14cc0.png",
     "static/media/LR6.png": "/portfolio/static/media/LR6.2de87e270e7bd7e14cc0.png",
     "static/media/registrationdatabase.png": "/portfolio/static/media/registrationdatabase.1458ac8c90b9c99e1d28.png",
     "static/media/activationkeyconnectedtouser.png": "/portfolio/static/media/activationkeyconnectedtouser.214678fa10d3432dd381.png",
+    "static/media/pokemon2.png": "/portfolio/static/media/pokemon2.29ee43a46d08b3c19960.png",
     "static/media/crypto5.png": "/portfolio/static/media/crypto5.6bacd5f89272aa4facf4.png",
+    "static/media/pokemon10.png": "/portfolio/static/media/pokemon10.9c020e9f2c6bc55544f9.png",
     "static/media/LR2.png": "/portfolio/static/media/LR2.e34ab31ad3c01a49c63f.png",
     "static/media/aktiveringsnøkkel.png": "/portfolio/static/media/aktiveringsnøkkel.86c52152678c3b58d3b9.png",
     "static/media/databaseactivationkey.png": "/portfolio/static/media/databaseactivationkey.56cf1bd7cf179c5fe5ab.png",
+    "static/media/pokemon4.png": "/portfolio/static/media/pokemon4.17c768fc24c46d2cc747.png",
     "static/media/LR8.png": "/portfolio/static/media/LR8.51aeb73f758b0500eaed.png",
+    "static/media/pokemon7.png": "/portfolio/static/media/pokemon7.113e7a49f25394d69b4b.png",
+    "static/media/pokemon6.png": "/portfolio/static/media/pokemon6.798313c54e3dda606426.png",
+    "static/media/pokemon8.png": "/portfolio/static/media/pokemon8.0b1def76696d52b1c593.png",
     "static/media/AL.png": "/portfolio/static/media/AL.80b319e5abd9bd6464ca.png",
     "static/media/crypto4.png": "/portfolio/static/media/crypto4.64e7bac454dc37d77464.png",
     "static/media/xx.png": "/portfolio/static/media/xx.97d93d72dca3b8e208e7.png",
@@ -44,10 +51,13 @@
     "static/media/crypto.png": "/portfolio/static/media/crypto.f6123c5ed9b88b8434e6.png",
     "static/media/LR1.png": "/portfolio/static/media/LR1.e14395a0135a6dae0005.png",
     "static/media/crypto3.png": "/portfolio/static/media/crypto3.2c013787340f597708fe.png",
+    "static/media/pokemon5.png": "/portfolio/static/media/pokemon5.f16e7b79eb23b4676983.png",
     "static/media/LR4.png": "/portfolio/static/media/LR4.3e6524272785d28add7e.png",
+    "static/media/pokemon3.png": "/portfolio/static/media/pokemon3.5b39847952dd82b0e1ba.png",
     "static/media/crypto7.png": "/portfolio/static/media/crypto7.3624b820af47b50e31eb.png",
     "static/media/crypto11.png": "/portfolio/static/media/crypto11.b7abbdc6e841a1e3a75c.png",
     "static/media/LR3.png": "/portfolio/static/media/LR3.3340a13cf5fac848e205.png",
+    "static/media/pokemon9.png": "/portfolio/static/media/pokemon9.157b776d141b92b0fb05.png",
     "static/media/blackjack1.png": "/portfolio/static/media/blackjack1.36d9743257e1c42a831f.png",
     "static/media/crypto9.png": "/portfolio/static/media/crypto9.7f28a24078bd9d1f7185.png",
     "static/media/appdatafolder.png": "/portfolio/static/media/appdatafolder.ec74d6849a7a0a81892d.png",
@@ -57,10 +67,10 @@
     "static/media/blackjack3.png": "/portfolio/static/media/blackjack3.27dae92f1df283b91577.png",
     "index.html": "/portfolio/index.html",
     "main.1080e785.css.map": "/portfolio/static/css/main.1080e785.css.map",
-    "main.cdfe111d.js.map": "/portfolio/static/js/main.cdfe111d.js.map"
+    "main.0687a4a7.js.map": "/portfolio/static/js/main.0687a4a7.js.map"
   },
   "entrypoints": [
     "static/css/main.1080e785.css",
-    "static/js/main.cdfe111d.js"
+    "static/js/main.0687a4a7.js"
   ]
 }
