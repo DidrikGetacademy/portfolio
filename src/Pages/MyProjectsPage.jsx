@@ -38,26 +38,34 @@ import blackjack from '../Image/blackjack.png';
 import blackjack1 from '../Image/blackjack1.png';
 import blackjack2 from '../Image/blackjack2.png';
 import blackjack3 from '../Image/blackjack3.png';
-import unet from '../Image/u-net-architecture.png'
-import unet2 from '../Image/unet.png'
-import crypto2 from '../Image/crypto.png'
-import crypto3 from '../Image/crypto2.png'
-import crypto4 from '../Image/crypto3.png'
-import crypto5 from '../Image/crypto4.png'
-import crypto6 from '../Image/crypto5.png'
-import crypto7 from '../Image/crypto7.png'
-import crypto8 from '../Image/crypto9.png'
-import crypto10 from '../Image/crypto10.png'
-import crypto11 from '../Image/crypto11.png'
-import huggingface from '../Image/huggingface.png'
-import huggingface1 from '../Image/huggingface2.png'
-import huggingface2 from '../Image/huggingface3.png'
-import huggingface3 from '../Image/huggingface4.png'
+import unet from '../Image/u-net-architecture.png';
+import unet2 from '../Image/unet.png';
+import crypto2 from '../Image/crypto.png';
+import crypto3 from '../Image/crypto2.png';
+import crypto4 from '../Image/crypto3.png';
+import crypto5 from '../Image/crypto4.png';
+import crypto6 from '../Image/crypto5.png';
+import crypto7 from '../Image/crypto7.png';
+import crypto8 from '../Image/crypto9.png';
+import crypto10 from '../Image/crypto10.png';
+import crypto11 from '../Image/crypto11.png';
+import huggingface from '../Image/huggingface.png';
+import huggingface1 from '../Image/huggingface2.png';
+import huggingface2 from '../Image/huggingface3.png';
+import huggingface3 from '../Image/huggingface4.png';
 import kalkulator2 from '../Image/kalkulator2.png';
-import kalkulator from '../Image/kalkulator.png'
+import kalkulator from '../Image/kalkulator.png';
+import pokemon1 from '../Image/Pokemon1.png'
+import pokemon2 from '../Image/pokemon2.png'
+import pokemon3 from '../Image/pokemon3.png'
+import pokemon4 from '../Image/pokemon4.png'
+import pokemon5 from '../Image/pokemon5.png'
+import pokemon6 from '../Image/pokemon6.png'
+import pokemon7 from '../Image/pokemon7.png'
+import pokemon8 from '../Image/pokemon8.png'
+import pokemon9 from '../Image/pokemon9.png'
+import pokemon10 from '../Image/pokemon10.png'
 function MyProjectsPage() {
-
-
   return (
     <div id="ProjectcardSection" >
       <div className={Styles["projects-grid"]}>
@@ -201,7 +209,16 @@ function MyProjectsPage() {
         technologies={["Javascript-Vanilla"]}
         githublink="https://github.com/DidrikGetacademy/Pokemon-JS-"
         images={[
-
+          pokemon1,
+          pokemon2,
+          pokemon3,
+          pokemon4,
+          pokemon5,
+          pokemon6,
+          pokemon7,
+          pokemon8,
+          pokemon9,
+          pokemon10
         ]}
         />
 
