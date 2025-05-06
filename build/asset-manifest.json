@@ -1,12 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1080e785.css",
-    "main.js": "/portfolio/static/js/main.0687a4a7.js",
+    "main.js": "/portfolio/static/js/main.f78fe4d2.js",
     "static/media/moviespin4.png": "/portfolio/static/media/moviespin4.88e4ae08991a4e3c998a.png",
     "static/media/moviespin5.png": "/portfolio/static/media/moviespin5.2e1d8ebd56f2031d9724.png",
     "static/media/moviespinruller.png": "/portfolio/static/media/moviespinruller.b797be6b320ca57e0d27.png",
     "static/media/frontpage.png": "/portfolio/static/media/frontpage.d11717d14ba0c5164c69.png",
     "static/media/moviespin1.png": "/portfolio/static/media/moviespin1.429ac05d62edaa012d7e.png",
+    "static/media/financial.png": "/portfolio/static/media/financial.bdc899105b122e8a95a9.png",
+    "static/media/financial1.png": "/portfolio/static/media/financial1.35d9911311d5e43ae45a.png",
+    "static/media/financial2.png": "/portfolio/static/media/financial2.31baa47b73f5da43bb50.png",
     "static/media/moviespin3.png": "/portfolio/static/media/moviespin3.4feeb11b9c4d73de15d1.png",
     "static/media/brukerprofil.png": "/portfolio/static/media/brukerprofil.63fcbd7c03920a78ffa2.png",
     "static/media/validkeyactivation.png": "/portfolio/static/media/validkeyactivation.d466284ca61404b35c1f.png",
@@ -67,10 +70,10 @@
     "static/media/blackjack3.png": "/portfolio/static/media/blackjack3.27dae92f1df283b91577.png",
     "index.html": "/portfolio/index.html",
     "main.1080e785.css.map": "/portfolio/static/css/main.1080e785.css.map",
-    "main.0687a4a7.js.map": "/portfolio/static/js/main.0687a4a7.js.map"
+    "main.f78fe4d2.js.map": "/portfolio/static/js/main.f78fe4d2.js.map"
   },
   "entrypoints": [
     "static/css/main.1080e785.css",
-    "static/js/main.0687a4a7.js"
+    "static/js/main.f78fe4d2.js"
   ]
 }
