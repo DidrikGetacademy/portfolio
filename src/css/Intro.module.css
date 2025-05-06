@@ -129,6 +129,8 @@ body, html {
   align-items: center;
   background-color: black;
   overflow: hidden;
+  overflow-y: auto;
+
 }
 
 .container {
