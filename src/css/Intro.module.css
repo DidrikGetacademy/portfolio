@@ -1,24 +1,224 @@
+
+
 .Intro-Container {
-  background-color: black;
+  background-color: black;  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 4rem; 
+  padding: 2rem; 
+
+}
+
+.Headline {
+  font-size: 1.5rem;
+  color: #0ff;
+  text-align: center;
+  margin-top: 0rem;
+}
+
+
+.ProfileSection {
+  background-color: #1a1a1a; 
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  max-width: 600px;
+  max-width: 600px;
+  width: 100%;
+  margin-top:10vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  height: 100vh;
   align-items: center;
-  width: 100vw;
-  padding-top: 20px; 
+  align-self: flex-start;
+  margin-left: 10vh;;
+  height:fit-content
 }
 
-.Intro-Name {
-  display: flex;
-  flex-direction: column; 
+.Title {
+  font-size: 1.5rem;
+  color: #0ff;
+  margin-bottom: 4rem;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
-  
 }
 
+.ProfilePitchure {
+  height: 40vh;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px 5px rgba(0, 162, 255, 0.6);
+  margin-bottom: 1rem;
+}
+
+.Pbio {
+  color: #ccc;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 500px;
+}
+.headlineWrapper {
+  position: absolute;
+  top: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+
+
+.contentarea {
+  display: flex;
+  flex-direction: column; 
+  text-align: flex-start;
+  color: white;
+  position: relative;
+  align-items: flex-start;
+}
+
+.aboutme{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 0.2rem auto; 
+  padding: 0.2rem;
+  border-radius: 12px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  right: 55vh;
+  position: relative;
+  height:400px;
+  top: 25vh; 
+  gap: 0.4rem;
+}
+.aboutme h2{
+  font-size: 1.5rem;
+  margin-top:25px;
+}
+
+
+.IntroBio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  max-height:690px;
+  margin: 0.2rem auto; 
+  padding: 0.2rem;
+  border-radius: 12px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  margin-left: 6vh;
+  position: relative;
+  height:400px;
+  top: 25vh; 
+  gap: 0.4rem;
+}
+.IntroBio {
+  padding-left:5rem; 
+}
+
+.IntroBio p {
+  flex-shrink: 1;
+  margin: 0.2rem 0;
+  font-size: 1rem; 
+  line-height: 1.2;
+  font-weight: 600;
+    align-items: flex-start;
+}
+.IntroBio h2 {
+  font-size: 1.5rem;
+  margin-top:25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+  
+  
+}
+.ulbio{
+
+}
+ul{
+
+}
+li{
+
+}
+
+.ContactBtn {
+  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: #00ffff;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-align: center;
+    white-space: nowrap;
+  align-items: center;
+  width:auto;
+}
+
+.ContactBtn:hover {
+  background: #00cccc;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+
+
+.NavigationImage {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 60px;
+  z-index: 3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.2);
+  background-color: black;
+  animation: pulseGlow 2s infinite;
+}
+
+
+.NavigationImage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 40px rgba(0, 255, 255, 0.6);
+}
+
+
+.NavigationImage:hover {
+  transform: scale(1.1);
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.IntroBio p.techItem::before {
+  content: "✧ ";
+  color: #00ffff;
+}
+
+/* 
 .bio-Intro {
   text-align: center;
   text-decoration: wavy;
@@ -36,35 +236,10 @@
   position: absolute;
 }
 
-.bottom-NavigationIcon {
-  display: flex;
-  flex-direction: column;  
-  align-items: center;  
-  justify-content: center; 
-  width: 100%; 
-  padding-bottom: 50px;  
-  padding-top: 20px;  
-}
 
 
 
-.ContactBtn {
-  margin-top: 10px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  background: #00ffff;
-  color: black;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
 
-.ContactBtn:hover {
-  background: #00cccc;
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-}
 .ulbio {
   font-size: 0.95rem;
   list-style: none;
@@ -79,10 +254,6 @@
   color: #0ff;
 }
 
-.ulbio li.techItem::before {
-  content: "✧ ";
-  color: #00ffff;
-}
 
 
 .ulbio li::before {
@@ -91,27 +262,6 @@
 }
 
 
-.ProfilePitchure{
-  width: auto;
-  height: 40vh;
-  margin: 20px auto 0 auto; 
-  border-radius: 12px;
-  box-shadow: 0 0 15px 5px rgba(0, 162, 255, 0.6);
-}
-
-.Title {
-  font-size: 30px;
-  font-weight: bold;
-  font-style: italic;
-  color: white;
-}
-.Headline {
-  font-size: 1.25rem;
-  color: #0ff; 
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  text-align: center;
-}
 
 .Subline {
   font-size: 1rem;
@@ -133,15 +283,7 @@ body, html {
 
 }
 
-.container {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+
 
 .extra-site {
   position: absolute;
@@ -252,35 +394,9 @@ p{
   }
 }
 
-.NavigationImage {
-  animation: pulseGlow 2s infinite;
-}
-
-.NavigationImage {
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  border-radius: 60px;
-  z-index: 3;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 6px rgba(0, 255, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.2);
-  background-color: black;
-  animation: pulseGlow 2s infinite;
-}
-
-.NavigationImage:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 40px rgba(0, 255, 255, 0.6);
-}
 
 
-.NavigationImage:hover {
-  transform: scale(1.1);
-}
-.fadeOut {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
+
 
 .h1-WorkSection{
   align-items: center;
@@ -296,18 +412,6 @@ p{
 }
 
 
-.Pbio{
-  font-size: 1.3rem;
-  line-height: 1.6; 
-  text-align: center;
-  color: #ffffff;
-  max-width: 600px;
-  margin: 20px auto; 
-  padding: 0 20px; 
-  font-weight: 300; 
-  letter-spacing: 0.5px; 
-  
-}
 
 @media (max-width: 768px) {
   .Intro-Container {
@@ -321,10 +425,7 @@ p{
     padding: 0 10px;
   }
 
-  .ProfilePitchure {
-    height: 30vh;
-    margin-top: 10px;
-  }
+
   .Headline {
     font-size: 0.8rem;
     color: #0ff; 
@@ -374,4 +475,4 @@ p{
     font-size: medium;
     top: 40px;
   }
-}
+} */
