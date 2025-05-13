@@ -56,7 +56,7 @@
   align-items: center;
   margin-top:150px;
   animation: fadeIn 1.2s ease-in-out;
-  max-height: 72vh;
+
 }
 @keyframes fadeIn {
   from {
@@ -214,7 +214,8 @@
   border-radius: 12px;
   border: 2px solid white;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  margin-left: 6vh;
+  margin-left: auto;
+  margin-right: auto;
   margin-top:29vh;
   height:400px;
   gap: 0.4rem;
@@ -423,27 +424,53 @@
     white-space: nowrap;
   }
 
-  .Title {
+.IntroBio,
+.aboutme {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box; 
+  }
+.Intro-Container {
+  background-color: rgb(41, 38, 38);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  height:auto;
+}
+.ProfileSection{
+    height:auto;
+    width:auto
+  }
+  
+
+.Title {
     font-size: 1.1rem;
   }
 
-  .Pbio {
+.Pbio {
     font-size: 0.95rem;
     padding: 1rem;
   }
 
-  .NavigationImage {
+.NavigationImage {
     height: 32px;
     width: 32px;
   }
 
-  .ContactBtn {
+.ContactBtn {
     font-size: 0.8rem;
     padding: 8px 16px;
   }
 
-  .ProfilePitchure {
-    max-height: 200px;
+.ProfilePitchure {
+    height:auto;
+    max-height: 45vh;
     width: 100%;
   }
+
+
 }
