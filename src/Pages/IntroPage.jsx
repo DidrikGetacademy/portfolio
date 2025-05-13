@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Styles from "../css/Intro.module.css";
-import Didrik from "../Image/profilbilde.jpg";
-import NavigationImage from "../Image/Arrow2.png";
+import Didrik from "../Image/1111.png";
+import NavigationImage from "../Image/Arrow.png";
 import LComponent from '../Components/logocomponent'
 import { useNavigate } from "react-router-dom";
 function IntroPage() {
