@@ -22,7 +22,7 @@ function IntroPage() {
 
       <div className={Styles.headlineWrapper}>
         <h1 className={Styles.Headline}>👨‍💻 Full-Stack Developer | AI & Automation Enthusiast🤖</h1>
-        <p>Trykk for å se Mine prosjekter</p>
+        <p className={Styles.HeadlineSub}>Trykk for å se Mine prosjekter</p>
           <img
             alt="NavigationImage"
             className={Styles.NavigationImage}
@@ -63,7 +63,31 @@ function IntroPage() {
       </div>
       <div className={Styles.aboutme}>
         <h2>Les litt om meg</h2>
+    <p>
+      Jeg er en gutt på 24 år som har teknologi som min store lidenskap. Jeg har gått på Get Academy, og har i tillegg tatt flere digitale kurs for å lære mest mulig.
+    </p>
+    
+    <p>
+      Som person er jeg nysgjerrig på nye ting og lærevillig. Jeg liker å jobbe sammen med andre for å finne de beste løsningene, men også å jobbe selvstendig.
+    </p>
+    
+    <p>
+      Siden det blir mange timer foran PC, holder jeg meg i form med å trene på helsestudio noen dager i uken.
+    </p>
 
+    <h3>Min kunnskap ligger innenfor:</h3>
+    <ul>
+      <li>AL-programmeringsspråk for Microsoft Dynamics 365 Business Central</li>
+      <li>Vanilla JavaScript (frontend)</li>
+      <li>React (JavaScript-rammeverk)</li>
+      <li>Node.js</li>
+      <li>Express (backend): API, innlogging og registrering</li>
+      <li>Azure: database- og serverintegrasjon</li>
+      <li>C# (konsollspill, brukersystem)</li>
+      <li>Python: API, AI (U-Net, Transformer), distribusjon</li>
+      <li>Hugging Face, Transformers, TensorFlow, PyTorch</li>
+      <li>Kjennskap til PHP og Vue</li>
+    </ul>
       </div>
 
     </div>
