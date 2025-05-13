@@ -50,7 +50,9 @@ function IntroPage() {
         </div>
       </div>
 
-      <div className={Styles.IntroBio}>
+  <div className={`${Styles.IntroBio} ${Styles["zoom-on-hover"]}`}>
+
+
         <h2>Mine programmering språk ferdigheter</h2>
         <p className={Styles.techItem}>JavaScript</p>
         <p className={Styles.techItem}>Python</p>
@@ -59,22 +61,22 @@ function IntroPage() {
         <p className={Styles.techItem}>C#</p>
         <p className={Styles.techItem}>SQL</p>
         <p className={Styles.techItem}>React</p>
-     
       </div>
-      <div className={Styles.aboutme}>
+
+
+     <div className={`${Styles.aboutme} ${Styles["zoom-on-hover"]}`}>
         <h2>Les litt om meg</h2>
     <p>
       Jeg er en gutt på 24 år som har teknologi som min store lidenskap. Jeg har gått på Get Academy, og har i tillegg tatt flere digitale kurs for å lære mest mulig.
     </p>
-    
+  
     <p>
       Som person er jeg nysgjerrig på nye ting og lærevillig. Jeg liker å jobbe sammen med andre for å finne de beste løsningene, men også å jobbe selvstendig.
     </p>
-    
+  
     <p>
       Siden det blir mange timer foran PC, holder jeg meg i form med å trene på helsestudio noen dager i uken.
     </p>
-
     <h3>Min kunnskap ligger innenfor:</h3>
     <ul>
       <li>AL-programmeringsspråk for Microsoft Dynamics 365 Business Central</li>

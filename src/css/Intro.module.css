@@ -41,7 +41,23 @@
 .element {
   animation: rotateIn 1s ease-in-out;
 }
+.zoom-on-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.zoom-on-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.zoom-on-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-on-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
 
 .ProfileSection {
   background-color: #1a1a1a;
@@ -443,10 +459,13 @@
 }
 .ProfileSection{
     height:auto;
-    width:auto
+    width:auto;
+    margin-top: auto;
   }
   
-
+.Headline{
+  font-size: clamp(0.8rem, 3vw, 1.2rem)
+}
 .Title {
     font-size: 1.1rem;
   }
@@ -470,6 +489,9 @@
     height:auto;
     max-height: 45vh;
     width: 100%;
+  }
+  .HeadlineSub{
+    margin-bottom: auto;
   }
 
 
