@@ -1,15 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Styles from "../css/Intro.module.css";
 import Didrik from "../Image/1111.png";
 import NavigationImage from "../Image/Arrow.png";
 import LComponent from '../Components/logocomponent'
 import { useNavigate } from "react-router-dom";
+import { useAnimate, stagger } from "framer-motion";
+
 function IntroPage() {
+  const [scopetech, animateTech] = useAnimate();
+  const [scopeabout, animateabout] = useAnimate();
+
+useEffect(() => {
+  animateTech([
+    ["#techList", { opacity: 1 }],
+    [
+    "#techList p",
+      { x: [-30, 0], opacity: [0, 1] },
+      { delay: stagger(0.2), easing: "ease-out", duration: 0.5 },
+    ],
+  ]);
+}, [animateTech]);
+
+
+useEffect(() => {
+  
+  animateabout([
+    ["#introlist", {opacity: 1}],
+        [
+      "#introlist p",
+        { y: [10, 0], opacity: [0, 1] },
+      { delay: stagger(0.2, { startDelay: 0.1 }), duration: 0.5, easing: "ease-out" },
+    ],
+    [
+    "#introlist li",
+      { x: [-30, 0], opacity: [0, 1] },
+      { delay: stagger(0.2), easing: "ease-out", duration: 0.5 },
+    ]
+
+  ]);
+}, [animateabout]);
+
   const [fadeOut, setFadeout] = useState(false);
   const navigate = useNavigate();
   const handleScroll = () => {
     setFadeout(true);
-
     setTimeout(() => {
       navigate('/MyProjectsPage')
     }, 500);
@@ -17,9 +51,11 @@ function IntroPage() {
 
 
 
-  return (
-    <div className={`${Styles["Intro-Container"]} ${fadeOut ? Styles.fadeOut : ""}`}>
 
+
+  return (
+    
+    <div className={`${Styles["Intro-Container"]} ${fadeOut ? Styles.fadeOut : ""}`}>
       <div className={Styles.headlineWrapper}>
         <h1 className={Styles.Headline}>👨‍💻 Full-Stack Developer | AI & Automation Enthusiast🤖</h1>
         <p className={Styles.HeadlineSub}>Trykk for å se Mine prosjekter</p>
@@ -50,21 +86,23 @@ function IntroPage() {
         </div>
       </div>
 
-  <div className={`${Styles.IntroBio} ${Styles["zoom-on-hover"]}`}>
+{/* 👇 Ref på wrapperen, id på selve boksen */}
+<div ref={scopetech}>
+  <div className={`${Styles.IntroBio} ${Styles["zoom-on-hover"]}`} id="techList">
+    <h2>Mine programmering språk ferdigheter</h2>
+    <p className={Styles.techItem}>JavaScript</p>
+    <p className={Styles.techItem}>Python</p>
+    <p className={Styles.techItem}>AI Agents</p>
+    <p className={Styles.techItem}>AL – Business Central</p>
+    <p className={Styles.techItem}>C#</p>
+    <p className={Styles.techItem}>SQL</p>
+    <p className={Styles.techItem}>React</p>
+  </div>
+</div>
 
 
-        <h2>Mine programmering språk ferdigheter</h2>
-        <p className={Styles.techItem}>JavaScript</p>
-        <p className={Styles.techItem}>Python</p>
-        <p className={Styles.techItem}>AI Agents</p>
-        <p className={Styles.techItem}>AL – Business Central</p>
-        <p className={Styles.techItem}>C#</p>
-        <p className={Styles.techItem}>SQL</p>
-        <p className={Styles.techItem}>React</p>
-      </div>
 
-
-     <div className={`${Styles.aboutme} ${Styles["zoom-on-hover"]}`}>
+     <div ref={scopeabout} className={`${Styles.aboutme} ${Styles["zoom-on-hover"]}`} id="introlist">
         <h2>Les litt om meg</h2>
     <p>
       Jeg er en gutt på 24 år som har teknologi som min store lidenskap. Jeg har gått på Get Academy, og har i tillegg tatt flere digitale kurs for å lære mest mulig.
@@ -91,6 +129,7 @@ function IntroPage() {
       <li>Kjennskap til PHP og Vue</li>
     </ul>
       </div>
+
 
     </div>
 
