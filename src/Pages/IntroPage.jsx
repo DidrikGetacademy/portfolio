@@ -89,7 +89,28 @@ async function sendmessage() {
     const data = await postRes.json();
     const botReply = data.reply ?? "⚠️ No reply from PHP proxy.";
 
-    setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
+    setChatHistory(prev => [...prev, { sender: 'Bot', text: 'Gpt-Neo thinking...' }]);
+    let i = 0;
+    const typingSpeed = 30; 
+
+    const typeChar = () => {
+      setChatHistory(prev => {
+        const updated = [...prev];
+        const lastIndex = updated.length - 1;
+        updated[lastIndex] = {
+          ...updated[lastIndex],
+          text: botReply.slice(0, i + 1),
+        };
+        return updated;
+      });
+
+      i++;
+      if (i < botReply.length) {
+        setTimeout(typeChar, typingSpeed);
+      }
+    };
+
+typeChar();
     console.log("✅ Bot reply:", botReply);
   } catch (error) {
     console.error("❌ Error sending message to PHP:", error);

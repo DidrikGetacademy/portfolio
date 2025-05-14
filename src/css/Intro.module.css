@@ -32,11 +32,17 @@
 .userMsg {
   text-align: right;
   color: #3498db;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .botMsg {
   text-align: left;
   color: #2ecc71;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .chatbotContainer{
