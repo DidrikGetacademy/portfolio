@@ -86,7 +86,6 @@ useEffect(() => {
         </div>
       </div>
 
-{/* 👇 Ref på wrapperen, id på selve boksen */}
 <div ref={scopetech}>
   <div className={`${Styles.IntroBio} ${Styles["zoom-on-hover"]}`} id="techList">
     <h2>Mine programmering språk ferdigheter</h2>
