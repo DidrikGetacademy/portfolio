@@ -63,88 +63,51 @@ useEffect(() => {
 async function sendmessage() {
   console.log("🔁 sendmessage() called");
 
-  const urls = [
-    'https://didrikskjelbred-chatbot-api.hf.space/generate_reply',
-    'https://didrikskjelbred-chatbot-api.hf.space/api/predict/', 
-    'https://didrikskjelbred-chatbot-api.hf.space/gradio_api/predict/',
-    'https://didrikskjelbred-chatbot-api.hf.space/generate_reply',
-    'https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply',
-    'https://didrikskjelbred-chatbot-api.hf.space/generate_reply',
-    'https://didrikskjelbred-chatbot-api.hf.space/run/predict',
-    'https://didrikskjelbred-chatbot-api.hf.space/predict',
-  ];
-
+  const endpoint = 'https://didrikskjelbred-chatbot-api.hf.space/gradio_api/call/generate_reply';
   const userMsg = userMessage;
+
   console.log("Sending message:", userMsg);
   setChatHistory(prev => [...prev, { sender: 'user', text: userMessage }]);
   setUserMessage("");
 
-  for (const url of urls) {
-    try {
-      console.log("Attempting to send message to:", url);
+  try {
+    // Step 1: POST the message to Gradio
+    const postRes = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data: [userMsg] }),
+    });
 
- 
-      if (url.includes('/api/predict')) {
-        const postRes = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            data: [userMsg],
-            fn_index: 0
-          })
-        });
-
-        if (!postRes.ok) {
-          const errText = await postRes.text();
-          console.error(`❌ POST failed from ${url}. Status:`, postRes.status, "Body:", errText);
-          continue;
-        }
-
-        const postData = await postRes.json();
-        const eventId = postData?.event_id;
-        if (!eventId) {
-          console.error("❌ No event_id returned.");
-          continue;
-        }
-
-        const pollRes = await fetch(`https://didrikskjelbred-chatbot-api.hf.space/api/poll/${eventId}`);
-        const pollData = await pollRes.json();
-
-        const botReply = pollData?.data?.[0] ?? "⚠️ No reply";
-        setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
-        console.log("✅ Response received from:", url, "Data:", botReply);
-        return;
-      }
-
-
-      const response = await fetch(url, {
-        method: 'POST',
-        mode: "cors",
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ data: [userMsg] })
-      });
-
-      if (!response.ok) {
-        const errText = await response.text();
-        console.error(`❌ Network response not ok from ${url}. Status:`, response.status, "Body:", errText);
-        continue; 
-      }
-
-      const data = await response.json();
-      const botReply = data?.data?.[0] ?? "X no response";
-      setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
-      console.log("✅ Response received from:", url, "Data:", botReply);
+    if (!postRes.ok) {
+      const errText = await postRes.text();
+      console.error(`❌ POST failed. Status:`, postRes.status, "Body:", errText);
+      setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ Failed to contact bot." }]);
       return;
-
-    } catch (error) {
-      console.error(`❌ Error sending message to ${url}:`, error);
     }
+
+    const postData = await postRes.json();
+    const eventId = postData?.event_id;
+
+    if (!eventId) {
+      console.error("❌ No event_id returned.");
+      setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ No response ID from bot." }]);
+      return;
+    }
+
+    // Step 2: Poll for the result
+    const pollUrl = `https://didrikskjelbred-chatbot-api.hf.space/gradio_api/call/generate_reply/${eventId}`;
+    const pollRes = await fetch(pollUrl);
+    const pollData = await pollRes.json();
+
+    const botReply = pollData?.data?.[0] ?? "⚠️ No reply";
+    setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
+    console.log("✅ Response received:", botReply);
+  } catch (error) {
+    console.error("❌ Error sending message:", error);
+    setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ Error occurred while talking to the bot." }]);
   }
-
-
-  setChatHistory(prev => [...prev, { sender: 'Bot', text: "X no response" }]);
 }
 
 
