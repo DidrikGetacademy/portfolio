@@ -59,11 +59,10 @@ useEffect(() => {
 
 
 
-
 async function sendmessage() {
   console.log("🔁 sendmessage() called");
 
-  const endpoint = 'https://didrikskjelbred-chatbot-api.hf.space/gradio_api/call/generate_reply';
+  const endpoint = 'https://learnreflects.com/Server/server_llm.php'; 
   const userMsg = userMessage;
 
   console.log("Sending message:", userMsg);
@@ -71,45 +70,31 @@ async function sendmessage() {
   setUserMessage("");
 
   try {
-    // Step 1: POST the message to Gradio
     const postRes = await fetch(endpoint, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify({ data: [userMsg] }),
+      body: new URLSearchParams({ message: userMsg }),
     });
 
     if (!postRes.ok) {
       const errText = await postRes.text();
-      console.error(`❌ POST failed. Status:`, postRes.status, "Body:", errText);
-      setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ Failed to contact bot." }]);
+      console.error(`❌ PHP POST failed. Status:`, postRes.status, "Body:", errText);
+      setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ Failed to contact PHP proxy." }]);
       return;
     }
 
-    const postData = await postRes.json();
-    const eventId = postData?.event_id;
+    const data = await postRes.json();
+    const botReply = data.reply ?? "⚠️ No reply from PHP proxy.";
 
-    if (!eventId) {
-      console.error("❌ No event_id returned.");
-      setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ No response ID from bot." }]);
-      return;
-    }
-
-    // Step 2: Poll for the result
-    const pollUrl = `https://didrikskjelbred-chatbot-api.hf.space/gradio_api/call/generate_reply/${eventId}`;
-    const pollRes = await fetch(pollUrl);
-    const pollData = await pollRes.json();
-
-    const botReply = pollData?.data?.[0] ?? "⚠️ No reply";
     setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
-    console.log("✅ Response received:", botReply);
+    console.log("✅ Bot reply:", botReply);
   } catch (error) {
-    console.error("❌ Error sending message:", error);
+    console.error("❌ Error sending message to PHP:", error);
     setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ Error occurred while talking to the bot." }]);
   }
 }
-
 
 
 
