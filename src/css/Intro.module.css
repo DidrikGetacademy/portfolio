@@ -1,13 +1,10 @@
 
-
 .Intro-Container {
-  background-color: rgb(41, 38, 38);  
   height: 100vh;
   width: 100%;
   display: flex;
   gap: 4rem; 
 }
-
 
 .Headline {
   font-size: clamp(1rem, 4.5vw, 1.5rem); 
