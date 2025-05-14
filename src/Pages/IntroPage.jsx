@@ -58,6 +58,9 @@ useEffect(() => {
 
   async function sendmessage() {
     console.log("🔁 sendmessage() called");
+    const username = "didrik"
+     const password = "github123"
+     const basicAuth = btoa(`${username}:${password}`);
 
     try{
 
@@ -68,7 +71,8 @@ useEffect(() => {
       const response = await fetch('https://didrikskjelbred-chatbot-api.hf.space/run/didrikchatbot', {
         method: 'POST',
         headers: { 
-          'Content-Type': 'application/json' 
+          'Content-Type': 'application/json',
+          'Authorization': `Basic ${basicAuth}`
         },
         body: JSON.stringify({ data: [userMsg] })
       });
