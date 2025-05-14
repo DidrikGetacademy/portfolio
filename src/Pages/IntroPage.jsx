@@ -11,7 +11,7 @@ function IntroPage() {
   const [scopeabout, animateabout] = useAnimate();
   const [userMessage, setUserMessage] = useState('');
   const [responseMessage, setResponseMessage] = useState('')
-
+  const [chatHistory, setChatHistory] = useState([])
 
 useEffect(() => {
   animateTech([
@@ -24,6 +24,11 @@ useEffect(() => {
   ]);
 }, [animateTech]);
 
+
+
+useEffect(()=> {
+
+}, [])
 
 useEffect(() => {
   
@@ -58,25 +63,34 @@ useEffect(() => {
     try{
 
       console.log("message sent to gradio:", userMessage)
-      const response = await fetch('https://didrikSkjelbred-chatbot-api.hf.space/run/predict', {
+      const userMsg = userMessage
+      setChatHistory(prev => [...prev, {sender: 'user', text: userMessage}])
+      setUserMessage("");
+      const response = await fetch('https://didrikSkjelbred-chatbot-api.hf.space/run/didrikchatbot', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json' 
         },
-        body: JSON.stringify({ data: [userMessage] })
+        body: JSON.stringify({ data: [userMsg] })
       });
-      if (!response.ok){
-        throw new Error('Network response was not ok')
+      if (!response.ok) {
+        const errText = await response.text();
+        console.error("❌ Network response not ok. Status:", response.status, "Body:", errText);
+        throw new Error('Network response was not ok');
       }
+
       
       
       const data = await response.json();
+      const botReply = data?.data?.[0] ?? "X no response"
+      setChatHistory(prev => [...prev, {sender: 'Bot', text: botReply}])
       
       console.log("response recieved: ", data.data[0])
       setResponseMessage(data.data[0])
       
     } catch (error) {
       console.error("error sending message: ", error);
+      setChatHistory(prev => [...prev, {sender: 'Bot', text: "X no response"}])
       setResponseMessage("❌ Something went wrong. Please try again.")
     }
   }
@@ -132,15 +146,18 @@ useEffect(() => {
 
 <div className={Styles.chatbotContainer}>
   <div className={Styles.chatbox}>
-  <pre id="responseBox">ChatBot: {responseMessage}</pre>
-  <pre id="usermessage">User: {userMessage}</pre>
+    {chatHistory.map((msg, idx) => (
+      <pre key={idx} className={msg.sender === "user" ? Styles.userMsg : Styles.botMsg}>
+        {msg.sender}: {msg.text}
+      </pre>
 
+    ))}
   </div>
   <input value={userMessage}
    onChange={(e) => setUserMessage(e.target.value)}
    placeholder="Ask Ai Agent Something..."
   />
-  <button  onClick={sendmessage}>Send Message</button>
+  <button  onClick={sendmessage}>Send Message . </button>
 </div>
 
 

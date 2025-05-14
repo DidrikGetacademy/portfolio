@@ -29,6 +29,15 @@
   }
 }
 
+.userMsg {
+  text-align: right;
+  color: #3498db;
+}
+
+.botMsg {
+  text-align: left;
+  color: #2ecc71;
+}
 
 .chatbotContainer{
   display: flex;
