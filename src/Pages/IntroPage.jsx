@@ -9,6 +9,9 @@ import { useAnimate, stagger } from "framer-motion";
 function IntroPage() {
   const [scopetech, animateTech] = useAnimate();
   const [scopeabout, animateabout] = useAnimate();
+  const [userMessage, setUserMessage] = useState('');
+  const [responseMessage, setResponseMessage] = useState('')
+
 
 useEffect(() => {
   animateTech([
@@ -49,6 +52,34 @@ useEffect(() => {
     }, 500);
   };
 
+  async function sendmessage() {
+    console.log("🔁 sendmessage() called");
+
+    try{
+
+      console.log("message sent to gradio:", userMessage)
+      const response = await fetch('https://didrikSkjelbred-chatbot-api.hf.space/run/predict', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify({ data: [userMessage] })
+      });
+      if (!response.ok){
+        throw new Error('Network response was not ok')
+      }
+      
+      
+      const data = await response.json();
+      
+      console.log("response recieved: ", data.data[0])
+      setResponseMessage(data.data[0])
+      
+    } catch (error) {
+      console.error("error sending message: ", error);
+      setResponseMessage("❌ Something went wrong. Please try again.")
+    }
+  }
 
 
 
@@ -97,6 +128,19 @@ useEffect(() => {
     <p className={Styles.techItem}>SQL</p>
     <p className={Styles.techItem}>React</p>
   </div>
+</div>
+
+<div className={Styles.chatbotContainer}>
+  <div className={Styles.chatbox}>
+  <pre id="responseBox">ChatBot: {responseMessage}</pre>
+  <pre id="usermessage">User: {userMessage}</pre>
+
+  </div>
+  <input value={userMessage}
+   onChange={(e) => setUserMessage(e.target.value)}
+   placeholder="Ask Ai Agent Something..."
+  />
+  <button  onClick={sendmessage}>Send Message</button>
 </div>
 
 
