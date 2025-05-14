@@ -5,7 +5,6 @@ import NavigationImage from "../Image/Arrow.png";
 import LComponent from '../Components/logocomponent'
 import { useNavigate } from "react-router-dom";
 import { useAnimate, stagger } from "framer-motion";
-import { Client } from "@gradio/client";
 
 function IntroPage() {
   const [scopetech, animateTech] = useAnimate();
@@ -59,22 +58,34 @@ useEffect(() => {
 
   async function sendmessage() {
     console.log("🔁 sendmessage() called");
-
+    
 
     try{
-      const userMsg = userMessage
+
       console.log("message sent to gradio:", userMessage)
-      const client = await Client.connect("didrikSkjelbred/chatbot-api")
-      const result = await client.predict("/predict", {
-        message: userMsg,
-      });
+      const userMsg = userMessage
       setChatHistory(prev => [...prev, {sender: 'user', text: userMessage}])
       setUserMessage("");
+      const response = await fetch('https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ data: [userMsg] })
+      });
+      if (!response.ok) {
+        const errText = await response.text();
+        console.error("❌ Network response not ok. Status:", response.status, "Body:", errText);
+        throw new Error('Network response was not ok');
+      }
 
-      const botReply = result.data ?? "X no response"
+      
+      
+      const data = await response.json();
+      const botReply = data?.data?.[0] ?? "X no response"
       setChatHistory(prev => [...prev, {sender: 'Bot', text: botReply}])
       
-      console.log("response recieved: ", botReply)
+      console.log("response recieved: ", data.data[0])
       
     } catch (error) {
       console.error("error sending message: ", error);
