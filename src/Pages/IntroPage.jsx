@@ -56,44 +56,51 @@ useEffect(() => {
     }, 500);
   };
 
-  async function sendmessage() {
-    console.log("🔁 sendmessage() called");
-    
+async function sendmessage() {
+  console.log("🔁 sendmessage() called");
 
-    try{
+  const urls = [
+    'https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply',
+    'https://didrikskjelbred-chatbot-api.hf.space/run/predict'
+  ];
 
-      console.log("message sent to gradio:", userMessage)
-      const userMsg = userMessage
-      setChatHistory(prev => [...prev, {sender: 'user', text: userMessage}])
-      setUserMessage("");
-      const response = await fetch('https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply', {
+  const userMsg = userMessage;
+  console.log("Sending message:", userMsg);
+  setChatHistory(prev => [...prev, { sender: 'user', text: userMessage }]);
+  setUserMessage("");
+
+  for (const url of urls) {
+    try {
+      console.log("Attempting to send message to:", url);
+      const response = await fetch(url, {
         method: 'POST',
         mode: "cors",
-        
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ data: [userMsg] })
       });
+
       if (!response.ok) {
         const errText = await response.text();
-        console.error("❌ Network response not ok. Status:", response.status, "Body:", errText);
-        throw new Error('Network response was not ok');
+        console.error(`❌ Network response not ok from ${url}. Status:`, response.status, "Body:", errText);
+        continue; 
       }
 
-      
-      
       const data = await response.json();
-      const botReply = data?.data?.[0] ?? "X no response"
-      setChatHistory(prev => [...prev, {sender: 'Bot', text: botReply}])
-      
-      console.log("response recieved: ", data.data[0])
-      
+      const botReply = data?.data?.[0] ?? "X no response";
+      setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
+      console.log("✅ Response received from:", url, "Data:", botReply);
+      return; 
     } catch (error) {
-      console.error("error sending message: ", error);
-      setChatHistory(prev => [...prev, {sender: 'Bot', text: "X no response"}])
+      console.error(`❌ Error sending message to ${url}:`, error);
+     
     }
   }
+
+
+  setChatHistory(prev => [...prev, { sender: 'Bot', text: "X no response" }]);
+}
 
 
 
