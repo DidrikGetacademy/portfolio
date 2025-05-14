@@ -63,6 +63,7 @@ async function sendmessage() {
   console.log("🔁 sendmessage() called");
 
   const endpoint = 'https://learnreflects.com/Server/server_llm.php'; 
+  
   const userMsg = userMessage;
 
   console.log("Sending message:", userMsg);
@@ -145,6 +146,7 @@ async function sendmessage() {
 </div>
 
 <div className={Styles.chatbotContainer}>
+  <h2>Gpt-Neo - Chatbot</h2>
   <div className={Styles.chatbox}>
     {chatHistory.map((msg, idx) => (
       <pre key={idx} className={msg.sender === "user" ? Styles.userMsg : Styles.botMsg}>
