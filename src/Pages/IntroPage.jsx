@@ -68,7 +68,7 @@ useEffect(() => {
       const userMsg = userMessage
       setChatHistory(prev => [...prev, {sender: 'user', text: userMessage}])
       setUserMessage("");
-      const response = await fetch('https://didrikskjelbred-chatbot-api.hf.space/run/didrikchatbot', {
+      const response = await fetch('https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
