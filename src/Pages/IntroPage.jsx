@@ -68,6 +68,8 @@ useEffect(() => {
       setUserMessage("");
       const response = await fetch('https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply', {
         method: 'POST',
+        mode: "cors",
+        
         headers: { 
           'Content-Type': 'application/json',
         },
