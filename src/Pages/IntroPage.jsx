@@ -60,6 +60,7 @@ async function sendmessage() {
   console.log("🔁 sendmessage() called");
 
   const urls = [
+    'https://didrikskjelbred-chatbot-api.hf.space/generate_reply',
     'https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply',
     'https://didrikskjelbred-chatbot-api.hf.space/run/predict'
   ];
@@ -204,4 +205,4 @@ async function sendmessage() {
   );
 }
 
-export default IntroPage;
+export default IntroPage;
