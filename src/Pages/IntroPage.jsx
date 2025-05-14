@@ -56,10 +56,16 @@ useEffect(() => {
     }, 500);
   };
 
+
+
+
+  
 async function sendmessage() {
   console.log("🔁 sendmessage() called");
 
   const urls = [
+    'https://didrikskjelbred-chatbot-api.hf.space/api/predict/', 
+    'https://didrikskjelbred-chatbot-api.hf.space/gradio_api/predict/',
     'https://didrikskjelbred-chatbot-api.hf.space/generate_reply',
     'https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply',
     'https://didrikskjelbred-chatbot-api.hf.space/run/predict'
@@ -73,6 +79,41 @@ async function sendmessage() {
   for (const url of urls) {
     try {
       console.log("Attempting to send message to:", url);
+
+ 
+      if (url.includes('/api/predict')) {
+        const postRes = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            data: [userMsg],
+            fn_index: 0
+          })
+        });
+
+        if (!postRes.ok) {
+          const errText = await postRes.text();
+          console.error(`❌ POST failed from ${url}. Status:`, postRes.status, "Body:", errText);
+          continue;
+        }
+
+        const postData = await postRes.json();
+        const eventId = postData?.event_id;
+        if (!eventId) {
+          console.error("❌ No event_id returned.");
+          continue;
+        }
+
+        const pollRes = await fetch(`https://didrikskjelbred-chatbot-api.hf.space/api/poll/${eventId}`);
+        const pollData = await pollRes.json();
+
+        const botReply = pollData?.data?.[0] ?? "⚠️ No reply";
+        setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
+        console.log("✅ Response received from:", url, "Data:", botReply);
+        return;
+      }
+
+
       const response = await fetch(url, {
         method: 'POST',
         mode: "cors",
@@ -92,10 +133,10 @@ async function sendmessage() {
       const botReply = data?.data?.[0] ?? "X no response";
       setChatHistory(prev => [...prev, { sender: 'Bot', text: botReply }]);
       console.log("✅ Response received from:", url, "Data:", botReply);
-      return; 
+      return;
+
     } catch (error) {
       console.error(`❌ Error sending message to ${url}:`, error);
-     
     }
   }
 
@@ -205,4 +246,4 @@ async function sendmessage() {
   );
 }
 
-export default IntroPage;
+export default IntroPage;
