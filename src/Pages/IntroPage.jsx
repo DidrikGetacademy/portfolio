@@ -10,7 +10,6 @@ function IntroPage() {
   const [scopetech, animateTech] = useAnimate();
   const [scopeabout, animateabout] = useAnimate();
   const [userMessage, setUserMessage] = useState('');
-  const [responseMessage, setResponseMessage] = useState('')
   const [chatHistory, setChatHistory] = useState([])
 
 useEffect(() => {
@@ -66,7 +65,7 @@ useEffect(() => {
       const userMsg = userMessage
       setChatHistory(prev => [...prev, {sender: 'user', text: userMessage}])
       setUserMessage("");
-      const response = await fetch('https://didrikSkjelbred-chatbot-api.hf.space/run/didrikchatbot', {
+      const response = await fetch('https://didrikskjelbred-chatbot-api.hf.space/api/didrikchatbot', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json' 
@@ -86,12 +85,10 @@ useEffect(() => {
       setChatHistory(prev => [...prev, {sender: 'Bot', text: botReply}])
       
       console.log("response recieved: ", data.data[0])
-      setResponseMessage(data.data[0])
       
     } catch (error) {
       console.error("error sending message: ", error);
       setChatHistory(prev => [...prev, {sender: 'Bot', text: "X no response"}])
-      setResponseMessage("❌ Something went wrong. Please try again.")
     }
   }
 
