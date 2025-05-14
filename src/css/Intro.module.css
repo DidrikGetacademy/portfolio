@@ -30,7 +30,7 @@
 }
 
 .userMsg {
-  text-align: right;
+  text-align: left;
   color: #3498db;
   word-wrap: break-word;
   white-space: normal;
