@@ -59,7 +59,7 @@ useEffect(() => {
 
 
 
-  
+
 async function sendmessage() {
   console.log("🔁 sendmessage() called");
 
@@ -68,7 +68,9 @@ async function sendmessage() {
     'https://didrikskjelbred-chatbot-api.hf.space/gradio_api/predict/',
     'https://didrikskjelbred-chatbot-api.hf.space/generate_reply',
     'https://didrikskjelbred-chatbot-api.hf.space/run/generate_reply',
-    'https://didrikskjelbred-chatbot-api.hf.space/run/predict'
+    'https://didrikskjelbred-chatbot-api.hf.space/generate_reply',
+    'https://didrikskjelbred-chatbot-api.hf.space/run/predict',
+    'https://didrikskjelbred-chatbot-api.hf.space/predict',
   ];
 
   const userMsg = userMessage;
