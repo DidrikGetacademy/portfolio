@@ -72,7 +72,6 @@ useEffect(() => {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
-          'Authorization': `Basic ${basicAuth}`
         },
         body: JSON.stringify({ data: [userMsg] })
       });
