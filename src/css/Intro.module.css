@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  gap: 4rem; 
+  gap: 2rem; 
 }
 
 .Headline {
@@ -45,29 +45,7 @@
   overflow-wrap: break-word;
 }
 
-.chatbotContainer{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  background-color: black;
-  color: white;
-  width: 100%;
-  max-width: 725px;
-  margin: 0.2rem auto; 
-  padding: 0.2rem;
-  border-radius: 12px;
-  border: 2px solid white;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  right: 55vh;
-  height:fit-content;
-  margin-top:25vh;
-  margin: auto;
-  gap: 0.4rem;
-  animation: fadeIn 2s backwards;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
-  animation: glow 1.5s infinite ease-in-out;
-}
+
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px rgb(5, 173, 123), 0 0 20px #0ff;
@@ -150,7 +128,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:150px;
+  margin-top:225px;
   animation: fadeIn 1.2s ease-in-out;
   margin-bottom: auto;
 
@@ -205,7 +183,7 @@
 }
 .headlineWrapper {
   position: absolute;
-  top: 2vh;
+  top: 0vh;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -242,17 +220,16 @@
   color: white;
   width: 100%;
   max-width: 725px;
-  margin: 0.2rem auto; 
+  margin-left: auto;
+  margin-right: auto;
   padding: 0.2rem;
   border-radius: 12px;
+  margin: auto;
   border: 2px solid white;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  right: 55vh;
   height:fit-content;
-  margin-top:10vh;
-  gap: 0.4rem;
+  margin-top:250px;
   animation: fadeIn 2s backwards;
-
 }
 .aboutme h2, .aboutme h3 {
   margin-bottom: 0.5rem;
@@ -262,10 +239,12 @@
   margin-bottom: 1rem;
   max-width: 650px;
   text-align: left;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
 }
 
 .aboutme li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 
 }
 .aboutme li:last-child {
@@ -296,28 +275,6 @@
 }
 
 
-.IntroBio {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  background-color: black;
-  color: white;
-  width: 100%;
-  max-width: 500px;
-  max-height:690px;
-  margin: 0.2rem auto; 
-  padding: 0.2rem;
-  border-radius: 12px;
-  border: 2px solid white;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top:29vh;
-  height:400px;
-  gap: 0.4rem;
-  animation: fadeIn 2s backwards;
-}
 
 
 @media (min-width: 1905px) {
@@ -365,6 +322,60 @@
   
   
 }
+.techAndChatWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5vh;      /* Flytt den oppover */
+  margin-left: auto;     /* Fjern hvis det skyver den for langt til høyre */
+  margin-right: auto;    /* Sentrum */
+  max-width: 725px;      /* Matcher bredden på .aboutme */
+}
+.IntroBio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 450px;
+  max-height:690px;
+  margin: 0.2rem auto; 
+  padding: 0.2rem;
+  border-radius: 12px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  height:400px;
+  gap:0.2rem;
+  animation: fadeIn 2s backwards;
+}
+.chatbotContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 725px;
+  margin: 0.2rem auto; 
+  padding: 0.2rem;
+  border-radius: 12px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  right: 55vh;
+  height:fit-content;
+  margin-top:25vh;
+  margin: auto;
+  gap: 0.4rem;
+  animation: fadeIn 2s backwards;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  animation: glow 1.5s infinite ease-in-out;
+}
 
 .HeadlineSub {
   font-family: 'Roboto', 'Montserrat', 'Segoe UI', sans-serif;
@@ -372,7 +383,7 @@
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #fff;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-weight: 500;
   opacity: 0.85;
   animation: fadeIn 1.2s ease-in;
@@ -462,14 +473,10 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    gap: 2rem;
+    gap: 1rem;
   }
 
-  .headlineWrapper {
-    position: static;
-    transform: none;
-    margin-bottom: 2rem;
-  }
+
 
   .ProfileSection {
     margin: 6vh auto 2rem;
@@ -520,7 +527,11 @@
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-
+  .headlineWrapper {
+    position: static;
+    transform: none;
+    margin-bottom: 2rem;
+  }
 }
 
 
@@ -594,6 +605,13 @@
   .HeadlineSub{
     margin-bottom: auto;
   }
+
+
+    .headlineWrapper {
+    position: static;
+    transform: none;
+    margin-bottom: 2rem;
+  }
 }
 
 
@@ -607,6 +625,11 @@
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
+  }  
+  .headlineWrapper {
+    position: static;
+    transform: none;
+    margin-bottom: 2rem;
   }
 
 .Intro-Container {

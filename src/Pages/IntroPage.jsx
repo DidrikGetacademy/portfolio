@@ -159,39 +159,6 @@ async function sendmessage() {
         </div>
       </div>
 
-<div ref={scopetech}>
-  <div className={`${Styles.IntroBio} ${Styles["zoom-on-hover"]}`} id="techList">
-    <h2>Mine programmering språk ferdigheter</h2>
-    <p className={Styles.techItem}>JavaScript</p>
-    <p className={Styles.techItem}>Python</p>
-    <p className={Styles.techItem}>AI Agents</p>
-    <p className={Styles.techItem}>AL – Business Central</p>
-    <p className={Styles.techItem}>C#</p>
-    <p className={Styles.techItem}>SQL</p>
-    <p className={Styles.techItem}>React</p>
-  </div>
-</div>
-
-<div className={Styles.chatbotContainer}>
-  <h2>Falcon 1B - Chatbot</h2>
-  <div className={Styles.chatbox}>
-    {chatHistory.map((msg, idx) => (
-      <pre key={idx} className={msg.sender === "user" ? Styles.userMsg : Styles.botMsg}>
-        {msg.sender}: {msg.text}
-      </pre>
-
-    ))}
-  </div>
-  <input value={userMessage}
-   onChange={(e) => setUserMessage(e.target.value)}
-   placeholder="Ask Ai Agent Something..."
-  />
-  <button disabled={loading} onClick={sendmessage}>
-    {loading ? "Please wait... Model is processing." : "Send Message"}
-    </button>
-</div>
-
-
 
      <div ref={scopeabout} className={`${Styles.aboutme} ${Styles["zoom-on-hover"]}`} id="introlist">
         <h2>Les litt om meg</h2>
@@ -220,6 +187,43 @@ async function sendmessage() {
       <li>Kjennskap til PHP og Vue</li>
     </ul>
       </div>
+
+
+  <div className={Styles.techAndChatWrapper}>
+<div ref={scopetech}>
+  <div className={`${Styles.IntroBio} ${Styles["zoom-on-hover"]}`} id="techList">
+    <h2>Mine programmering språk ferdigheter</h2>
+    <p className={Styles.techItem}>JavaScript</p>
+    <p className={Styles.techItem}>Python</p>
+    <p className={Styles.techItem}>AI Agents</p>
+    <p className={Styles.techItem}>AL – Business Central</p>
+    <p className={Styles.techItem}>C#</p>
+    <p className={Styles.techItem}>SQL</p>
+    <p className={Styles.techItem}>React</p>
+  </div>
+</div>
+
+<div className={Styles.chatbotContainer}>
+  <h2>Falcon 1B - Chatbot</h2>
+  <div className={Styles.chatbox}>
+    {chatHistory.map((msg, idx) => (
+      <pre key={idx} className={msg.sender === "user" ? Styles.userMsg : Styles.botMsg}>
+        {msg.sender}: {msg.text}
+      </pre>
+
+))}
+  </div>
+  <input value={userMessage}
+   onChange={(e) => setUserMessage(e.target.value)}
+   placeholder="Ask Ai Agent Something..."
+   />
+  <button disabled={loading} onClick={sendmessage}>
+    {loading ? "Please wait... Model is processing." : "Send Message"}
+    </button>
+</div>
+
+   </div>
+
 
 
     </div>
