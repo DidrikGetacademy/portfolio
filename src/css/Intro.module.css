@@ -65,7 +65,23 @@
   margin: auto;
   gap: 0.4rem;
   animation: fadeIn 2s backwards;
-
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  animation: glow 1.5s infinite ease-in-out;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgb(5, 173, 123), 0 0 20px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 20px rgb(0, 238, 178), 0 0 30px #0ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+}
+.chatbotContainer.loading {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px 4px rgba(0, 255, 255, 0.6);
 }
 .chatbotContainer input {
   border-radius: 30px;
@@ -74,6 +90,7 @@
   height:50px;
   width:80%;
 }
+
 .chatbotContainer button {
   border: 2px solid white;
   width:300px;
@@ -135,6 +152,7 @@
   align-items: center;
   margin-top:150px;
   animation: fadeIn 1.2s ease-in-out;
+  margin-bottom: auto;
 
 }
 @keyframes fadeIn {
@@ -302,6 +320,15 @@
 }
 
 
+@media (min-width: 1905px) {
+  .chatbotContainer {
+    margin-left: 3rem;
+  }
+
+  .IntroBio {
+    margin-right: 3rem;
+  }
+}
 
 
 @keyframes fadeIn {
@@ -509,7 +536,11 @@
     font-size: clamp(0.9rem, 4vw, 1.2rem);
     white-space: nowrap;
   }
-
+.chatbotContainer{
+    margin-left: auto;
+    margin-right: auto;
+        box-sizing: border-box; 
+}
 .IntroBio,
 .aboutme {
     margin-left: auto;
@@ -586,22 +617,3 @@
 
 
 
-@media (max-width: 2000px) {
-.IntroBio,
-.aboutme {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .headlineWrapper {
-  position: static;
-  transform: none;
-  }
-
-
-  .Intro-Container {
-    flex-direction: column;
-    align-items: center;
-  }
-}

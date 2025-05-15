@@ -11,6 +11,8 @@ function IntroPage() {
   const [scopeabout, animateabout] = useAnimate();
   const [userMessage, setUserMessage] = useState('');
   const [chatHistory, setChatHistory] = useState([])
+  const [loading, setLoading] = useState(false)
+
 
 useEffect(() => {
   animateTech([
@@ -60,6 +62,7 @@ useEffect(() => {
 
 
 async function sendmessage() {
+  setLoading(true)
   console.log("🔁 sendmessage() called");
 
   const endpoint = 'https://learnreflects.com/Server/server_llm.php'; 
@@ -89,7 +92,7 @@ async function sendmessage() {
     const data = await postRes.json();
     const botReply = data.reply ?? "⚠️ No reply from PHP proxy.";
 
-    setChatHistory(prev => [...prev, { sender: 'Bot', text: 'Gpt-Neo thinking...' }]);
+    setChatHistory(prev => [...prev, { sender: 'Bot', text: '' }]);
     let i = 0;
     const typingSpeed = 30; 
 
@@ -107,14 +110,17 @@ async function sendmessage() {
       i++;
       if (i < botReply.length) {
         setTimeout(typeChar, typingSpeed);
+      }else {
+        setLoading(false)
       }
     };
 
-typeChar();
+    typeChar();
     console.log("✅ Bot reply:", botReply);
   } catch (error) {
     console.error("❌ Error sending message to PHP:", error);
     setChatHistory(prev => [...prev, { sender: 'Bot', text: "⚠️ Error occurred while talking to the bot." }]);
+    setLoading(false)
   }
 }
 
@@ -167,7 +173,7 @@ typeChar();
 </div>
 
 <div className={Styles.chatbotContainer}>
-  <h2>Gpt-Neo - Chatbot</h2>
+  <h2>Falcon 1B - Chatbot</h2>
   <div className={Styles.chatbox}>
     {chatHistory.map((msg, idx) => (
       <pre key={idx} className={msg.sender === "user" ? Styles.userMsg : Styles.botMsg}>
@@ -180,7 +186,9 @@ typeChar();
    onChange={(e) => setUserMessage(e.target.value)}
    placeholder="Ask Ai Agent Something..."
   />
-  <button  onClick={sendmessage}>Send Message . </button>
+  <button disabled={loading} onClick={sendmessage}>
+    {loading ? "Please wait... Model is processing." : "Send Message"}
+    </button>
 </div>
 
 
