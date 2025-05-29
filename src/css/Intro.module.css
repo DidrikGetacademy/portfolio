@@ -164,7 +164,7 @@
 .Pbio {
   font-family: 'Montserrat','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
   color: #e0e0e0;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
   line-height: 1.6;
@@ -241,6 +241,7 @@
   text-align: left;
   line-height: 1.4;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .aboutme li {
@@ -253,6 +254,7 @@
 .aboutme ul {
   margin-bottom: 0;
   padding-bottom: 0;
+   font-size: 1.1rem;
 }
 .aboutme > *:last-child {
   margin-bottom: 0;
@@ -305,9 +307,10 @@
 .IntroBio p {
   flex-shrink: 1;
   margin: 0.2rem 0;
-  font-size: 1rem; 
+  font-size: 1.1rem; 
   line-height: 1.2;
   font-weight: 600;
+  margin-left: 30px;
   align-items: flex-start;
 }
 .IntroBio h2 {
@@ -319,7 +322,11 @@
   font-style: normal;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  margin-left: 10px;
+  margin-right: 10px;
+  white-space: nowrap;  /* Prevent line breaks */
   
+ 
   
 }
 .techAndChatWrapper {

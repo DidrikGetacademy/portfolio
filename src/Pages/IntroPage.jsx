@@ -163,7 +163,7 @@ async function sendmessage() {
      <div ref={scopeabout} className={`${Styles.aboutme} ${Styles["zoom-on-hover"]}`} id="introlist">
         <h2>Les litt om meg</h2>
     <p>
-      Jeg er en gutt på 24 år som har teknologi som min store lidenskap. Jeg har gått på Get Academy, og har i tillegg tatt flere digitale kurs for å lære mest mulig.
+    Programmering er  min store lidenskap. Jeg har gått på Get Academy, og har i tillegg tatt flere digitale kurs for å lære mest mulig.
     </p>
   
     <p>
@@ -206,6 +206,9 @@ async function sendmessage() {
 <div className={Styles.chatbotContainer}>
   <h2>Falcon 1B - Chatbot</h2>
   <div className={Styles.chatbox}>
+      <pre className={Styles.botMsg}>
+      AI-chatbot: Spør meg et spørsmål.
+    </pre>
     {chatHistory.map((msg, idx) => (
       <pre key={idx} className={msg.sender === "user" ? Styles.userMsg : Styles.botMsg}>
         {msg.sender}: {msg.text}
